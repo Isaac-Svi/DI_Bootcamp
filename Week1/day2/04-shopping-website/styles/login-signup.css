@@ -1,0 +1,23 @@
+form.login-signup {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max(300px, 60%);
+  text-align: center;
+}
+form.login-signup > *:not(h1) {
+  display: inline-block;
+  width: 80%;
+  margin: 1rem 0;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+  font-size: 1.1rem;
+}
+form.login-signup button {
+  padding: 0.5rem;
+  color: white;
+  background-color: #222;
+  cursor: pointer;
+}
