@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Iceland, Avengero, sans-serif;
+}
+
+:root {
+  font-size: calc(10px + 0.3vh + 0.4vw);
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #222;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 2rem;
+}
+ul li {
+  cursor: pointer;
+}
+
+/* background */
+main {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/002irm_ons_mas_mob_01_0.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-20%);
+  left: 3rem;
+  width: 55%;
+  z-index: 2;
+}
+.content > * {
+  color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px white;
+}
+.content h1 {
+  font-size: 10rem;
+}
+.content p {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
