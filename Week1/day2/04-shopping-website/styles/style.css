@@ -51,7 +51,7 @@ nav .logo {
 }
 nav .logo a {
   position: relative;
-  font-family: monospace, 'Enigmatic', sans-serif;
+  font-family: monospace, sans-serif;
   color: var(--clr-green-2);
   position: relative;
   top: -1rem;
