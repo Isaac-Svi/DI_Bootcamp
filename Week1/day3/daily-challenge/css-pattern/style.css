@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 900px;
+  height: 320px;
+  display: flex;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0 20px;
+}
+
+.col:nth-child(2n + 1) {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.col:nth-child(2) {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15%;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  border: 3px solid;
+  background-color: yellow;
+}
