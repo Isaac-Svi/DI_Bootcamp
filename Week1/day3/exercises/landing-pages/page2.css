@@ -10,7 +10,7 @@
   font-family: Poppins, 'Open Sans', 'Segoe UI', sans-serif;
 }
 :root {
-  font-size: calc(13px + 0.3vh + 0.4vw);
+  font-size: calc(15px + 0.4vh + 0.4vw);
 }
 body {
   min-height: 100vh;
@@ -175,12 +175,12 @@ button.download {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
   header {
     height: fit-content;
   }
 
   main form {
-    margin-top: 30%;
+    margin-top: 10%;
   }
 }
