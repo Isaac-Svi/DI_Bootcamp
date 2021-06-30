@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --blue-1: #0b486e;
+  --blue-2: #3e8fba;
+}
+body {
+  background-color: #f1f5f8;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+#logo {
+  font-weight: 400;
+  font-family: 'Varela Round', Nunito, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 40px;
+}
+#logo a {
+  color: var(--blue-1);
+}
+#logo span {
+  font-size: 1rem;
+}
+#logo i.small {
+  font-size: 0.8rem;
+  position: relative;
+  top: -0.2rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-transform: capitalize;
+}
+nav ul.left {
+  justify-content: flex-start;
+}
+nav ul.left li a {
+  color: #d1d6db;
+  font-weight: 600;
+}
+nav ul.left li.active a {
+  color: var(--blue-1);
+}
+nav ul.right {
+  color: #a7aeb3;
+  font-weight: 700;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 0.85rem;
+}
+nav ul.left > * {
+  margin-right: 1rem;
+}
+nav ul.right > * {
+  margin-left: 1rem;
+}
+nav button.sign-in {
+  background-color: white;
+  color: var(--blue-2);
+  border: 3px solid;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+}
+.top {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.top > * {
+  margin-bottom: 1rem;
+}
+.top h1 {
+  font-weight: 600;
+}
+.top p {
+  font-size: 1.3rem;
+  font-family: Nunito, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.top small {
+  font-weight: 700;
+  color: gray;
+}
+.top select {
+  color: var(--blue-2);
+  border: 3px solid;
+  font-weight: 700;
+  border-radius: 3px;
+  outline: none;
+}
