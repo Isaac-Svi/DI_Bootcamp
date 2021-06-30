@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" href="page2.css" />
+  </head>
+  <body>
+    <header class="flex-center">
+      <span class="message">unburden yourself from the weight of email overload!</span>
+      <button>learn now</button>
+    </header>
+    <main>
+      <h1>download now</h1>
+      <form onsubmit="event.preventDefault()">
+        <div class="grid">
+          <div class="input-group">
+            <input type="text" id="fname" required />
+            <label for="fname">first name</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="lname" required />
+            <label for="lname">last name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" required />
+            <label for="email">email (<a href="#">privacy policy</a>)</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="phonenum" required />
+            <label for="phonenum">phone number</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="webiste-url" required />
+            <label for="webiste-url">website url</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="company-name" required />
+            <label for="company-name">company name</label>
+          </div>
+        </div>
+        <div class="input-group select">
+          <select id="num-employees" required>
+            <option value="0">- Please select -</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label for="num-employees">how many employees work there?</label>
+        </div>
+        <div class="flex-column">
+          <ul class="services">
+            <div class="title">does your company sell any of the following services:</div>
+            <li>web design</li>
+            <li>online marketing</li>
+            <li>seo/sem</li>
+            <li>advertising agency services*</li>
+          </ul>
+          <select class="default">
+            <option value="0">- Please select -</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="subscribe" />
+          <label for="subscribe">subscribe to hubspot's marketing blog</label>
+        </div>
+        <button class="download">download now</button>
+      </form>
+    </main>
+  </body>
+</html>
