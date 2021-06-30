@@ -10,7 +10,7 @@
   font-family: Poppins, 'Open Sans', 'Segoe UI', sans-serif;
 }
 :root {
-  font-size: calc(15px + 0.4vh + 0.4vw);
+  font-size: calc(10px + 0.3vh + 0.4vw);
 }
 body {
   min-height: 100vh;
@@ -81,6 +81,7 @@ main > * {
 main h1 {
   letter-spacing: 2px;
   font-weight: 600;
+  padding: 3rem 0;
 }
 main form {
   font-size: 0.7rem;
