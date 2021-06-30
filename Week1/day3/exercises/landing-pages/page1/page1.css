@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito, sans-serif;
+}
+:root {
+  font-size: calc(13px + 0.3vh + 0.4vw);
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: none;
+  display: flex;
+  flex-direction: column;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/world-map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.747);
+}
+body > * {
+  position: relative;
+  z-index: 2;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0.5;
+}
+h1.title {
+  text-align: center;
+  padding: 2rem 10rem 0;
+  font-size: 2.6rem;
+  flex: 0.3;
+}
+.number {
+  margin: 20px;
+  width: max(300px, 18rem);
+}
+.number h1 {
+  color: #5c66c2;
+  text-align: center;
+}
+.number small {
+  display: block;
+  color: #7f888f;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.cards {
+  flex: 1;
+}
+.card {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: max(300px, 18rem);
+  height: max(250px, 16rem);
+  box-shadow: 0 4px 8px -3px rgb(0 0 0 / 30%), 0 8px 16px -5px rgb(0 0 0 / 15%);
+  margin: 20px;
+}
+.card > * {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card p {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  color: gray;
+}
+.card .description {
+  flex: 0.5;
+  flex-direction: column;
+  color: white;
+  padding: 1rem 0 0.3rem;
+}
+.card:nth-child(1) {
+  transform: translateY(-2.2rem);
+}
+.card:nth-child(2) {
+  transform: translateY(2rem);
+}
+.card:nth-child(3) {
+  transform: translateY(-0.8rem);
+}
+
+@media screen and (max-width: 1100px) {
+  body > * {
+    margin: 2rem;
+  }
+
+  h1.title {
+    text-align: center;
+    padding: 0;
+    font-size: 2.6rem;
+    flex: 0.3;
+  }
+
+  .card:nth-child(1) {
+    transform: translateY(0);
+  }
+  .card:nth-child(2) {
+    transform: translateY(0);
+  }
+  .card:nth-child(3) {
+    transform: translateY(0);
+  }
+}
+
+.card:nth-child(1) .description {
+  background-color: #fb8b8a;
+}
+.card:nth-child(2) .description {
+  background-color: #5c6ac3;
+}
+.card:nth-child(3) .description {
+  background-color: #46c1bf;
+}
+.card .name {
+  font-size: 1rem;
+}
+.card .img-container {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
