@@ -41,10 +41,16 @@
   margin-bottom: 20px;
 }
 
+.section1 .content h1 {
+  font-size: 2rem;
+}
+
 .section1 .content h1 span {
   text-transform: none;
 }
 
 .section1 .content p {
   line-height: 1.5rem;
+  color: var(--clr-6);
+  max-width: 30rem;
 }
