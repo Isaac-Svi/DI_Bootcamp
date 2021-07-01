@@ -1,0 +1,44 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  min-height: 50px;
+  padding: 0 1rem;
+  z-index: 999;
+
+  background-color: var(--clr-1);
+  color: var(--clr-2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 570px) {
+  nav {
+    padding: 2rem 3rem;
+  }
+  nav .logo {
+    margin-bottom: 20px;
+  }
+}
+
+nav .logo {
+  flex: 1 0 200px;
+}
+
+nav ul {
+  flex: 0.4 0 250px;
+
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--clr-2);
+  font-size: 0.9rem;
+}

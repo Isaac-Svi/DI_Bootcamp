@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Monserrat', 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: calc(12px + 0.3vh + 0.3vw);
+
+  --clr-1: #f97300;
+  --clr-2: white;
+  --clr-3: #f4f4f4;
+  --clr-4: #0c7a7b;
+  --clr-5: blue;
+  --clr-6: gray;
+  --clr-7: #d3d3d3;
+
+  --side-padding: 20vw;
+}
+
+.bg-orange {
+  background-color: var(--clr-1);
+  color: var(--clr-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+main {
+  background-color: var(--clr-3);
+}
+
+section {
+  width: 100%;
+}
+
+section:not(.section1, .section6) {
+  text-align: center;
+  padding: 10vh var(--side-padding) 0;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --side-padding: 5vw;
+  }
+}
+
+section:not(.section6) h1 {
+  color: var(--clr-1);
+  margin-bottom: 9vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 1rem;
+  cursor: pointer;
+}

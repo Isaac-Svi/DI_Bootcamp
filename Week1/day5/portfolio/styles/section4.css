@@ -1,0 +1,45 @@
+.section4 h3 {
+  color: var(--clr-1);
+}
+
+.section4 a {
+  color: var(--clr-5);
+}
+
+.section4 p,
+.section4 footer {
+  font-size: 0.9rem;
+}
+
+.section4 .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.section4 .content .card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 4px 8px -3px rgb(0 0 0 / 20%), 0 8px 16px -5px rgb(0 0 0 / 10%);
+}
+
+.section4 .content .card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.section4 .details {
+  background-color: var(--clr-2);
+  padding: 1rem 1.3rem;
+}
+
+.section4 .content .details > * {
+  margin: 5px 0;
+}
+
+.section4 footer {
+  padding: 0.5rem 1.3rem;
+}

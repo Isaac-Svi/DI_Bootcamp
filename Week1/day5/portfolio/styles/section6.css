@@ -1,0 +1,60 @@
+.section6 {
+  position: relative;
+  padding: 10vh var(--side-padding);
+  margin-top: 10vh;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 20vh);
+  height: 0;
+  border-top: 1px solid var(--clr-7);
+}
+
+.section6 .socials {
+  flex: 1 0 150px;
+  color: var(--clr-1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section6 .socials .icons {
+  margin-top: 10px;
+}
+
+.section6 .socials .icons a {
+  color: var(--clr-1);
+}
+
+.section6 form {
+  flex: 1 0 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section6 form > *:not(button) {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 1px var(--clr-6);
+}
+
+.section6 form input,
+.section6 form textarea {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.section6 form textarea {
+  min-height: 75px;
+}
