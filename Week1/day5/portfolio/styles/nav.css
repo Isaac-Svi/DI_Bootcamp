@@ -1,15 +1,10 @@
 nav {
-  position: fixed;
+  /* in order to use sticky, nav can't be inside header */
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: fit-content;
   min-height: 50px;
   padding: 0 1rem;
   z-index: 999;
-
-  background-color: var(--clr-1);
-  color: var(--clr-2);
 
   display: flex;
   justify-content: space-between;
@@ -17,9 +12,9 @@ nav {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 410px) {
   nav {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
   }
   nav .logo {
     margin-bottom: 20px;
@@ -28,6 +23,7 @@ nav {
 
 nav .logo {
   flex: 1 0 200px;
+  margin-right: 50px;
 }
 
 nav ul {

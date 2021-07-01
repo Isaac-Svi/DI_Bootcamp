@@ -1,7 +1,6 @@
 .section1 {
   position: relative;
   height: clamp(400px, 80vh, 900px);
-  padding-top: 50px;
 }
 
 .section1::after {
@@ -35,6 +34,12 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+}
+
+@media screen and (max-width: 340px) {
+  p {
+    width: 80%;
+  }
 }
 
 .section1 .content > *:not(:last-child) {
