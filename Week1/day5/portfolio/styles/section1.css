@@ -36,12 +36,6 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 340px) {
-  p {
-    width: 80%;
-  }
-}
-
 .section1 .content > *:not(:last-child) {
   margin-bottom: 20px;
 }

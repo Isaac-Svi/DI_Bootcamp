@@ -24,6 +24,7 @@ html {
   --clr-7: #d3d3d3;
 
   --side-padding: 20vw;
+  --transition: 0.3s;
 }
 
 .bg-orange {
@@ -60,12 +61,6 @@ section {
 section:not(.section1, .section6) {
   text-align: center;
   padding: 10vh var(--side-padding) 0;
-}
-
-@media screen and (max-width: 900px) {
-  :root {
-    --side-padding: 5vw;
-  }
 }
 
 section:not(.section6) h1 {

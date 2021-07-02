@@ -2,7 +2,7 @@ nav {
   /* in order to use sticky, nav can't be inside header */
   position: sticky;
   top: 0;
-  min-height: 50px;
+  height: 50px;
   padding: 0 1rem;
   z-index: 999;
 
@@ -10,20 +10,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
 
-@media screen and (max-width: 410px) {
-  nav {
-    padding: 2rem 1rem;
-  }
-  nav .logo {
-    margin-bottom: 20px;
-  }
+  transition: height var(--transition);
+
+  overflow: hidden;
 }
 
 nav .logo {
   flex: 1 0 200px;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 
 nav ul {
@@ -37,4 +32,12 @@ nav ul {
 nav a {
   color: var(--clr-2);
   font-size: 0.9rem;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+input#nav-toggle {
+  display: none;
 }

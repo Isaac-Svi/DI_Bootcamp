@@ -29,11 +29,13 @@
 }
 
 .section6 .socials .icons {
-  margin-top: 10px;
+  margin: 10px 0 15px;
 }
 
 .section6 .socials .icons a {
   color: var(--clr-1);
+  margin-right: 10px;
+  font-size: 1.4rem;
 }
 
 .section6 form {
