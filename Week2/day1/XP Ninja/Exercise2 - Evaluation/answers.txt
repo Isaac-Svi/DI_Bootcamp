@@ -1,0 +1,25 @@
+GUESSES
+
+1)  5 >= 1         -> true
+2)  0 === 1        -> false
+3)  4 <= 1         -> false
+4)  1 != 1         -> false
+5)  "A" > "B"      -> false
+6)  "B" < "C"      -> true
+7)  "a" > "A"      -> true
+8)  "b" < "A"      -> false
+9)  true === false -> false
+10) true != true   -> false
+
+RESULTS
+
+1)  true  - Correct
+2)  false - Correct
+3)  false - Correct
+4)  false - Correct
+5)  false - Correct
+6)  true  - Correct
+7)  true  - Correct
+8)  false - Correct
+9)  false - Correct
+10) false - Correct
