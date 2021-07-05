@@ -1,4 +1,4 @@
-let fruits = ["Banana", "Apples", "Oranges", "Blueberries"];
+let fruits = ['Banana', 'Apples', 'Oranges', 'Blueberries']
 
 // removing Banana using shift since we know it's at the beginning
 fruits.shift()
@@ -19,9 +19,11 @@ fruits.sort()
 fruits.push('Kiwi')
 
 // remove Apples from the array
+// in this case, since we know that Apples is the first index, we could've also just done this:
+// fruits.splice(0, 1)
 
 // first find index of Apples
-const appleIndex = fruits.findIndex(x => x === 'Apples')
+const appleIndex = fruits.findIndex((x) => x === 'Apples')
 
 // now remove Apples
 fruits.splice(appleIndex, 1)
