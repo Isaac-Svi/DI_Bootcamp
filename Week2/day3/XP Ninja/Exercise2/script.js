@@ -4,11 +4,13 @@ const findAvg = (gradesList) => {
   const average = sum / gradesList.length
 
   console.log(average)
-  return average
+  return average // for the bonus
 }
 
 // Step 3 and 4
-const hasPassed = (avg) => {
+const hasPassed = (gradeList) => {
+  const avg = findAvg(gradeList)
+
   return avg > 65 ? 'You passed!' : 'You failed.  Must repeat the course.'
 }
 
@@ -16,5 +18,5 @@ const hasPassed = (avg) => {
 const grades = [12, 75, 63, 100, 98, 84]
 const grades2 = [12, 75, 63, 23, 23, 23]
 
-console.log(hasPassed(findAvg(grades)))
-console.log(hasPassed(findAvg(grades2)))
+console.log(hasPassed(grades))
+console.log(hasPassed(grades2))
