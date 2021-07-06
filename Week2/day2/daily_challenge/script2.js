@@ -1,7 +1,7 @@
-let sentence = 'The movie is not that bad, I like it'
+// let sentence = 'The movie is not that bad, I like it'
 // let sentence = 'This dinner is not that bad ! You cook well'
 // let sentence = 'The movie is not that (bad), I like it'
-// let sentence = 'The movie is bad that not, I like it'
+let sentence = 'The movie is bad that not, I like it'
 // let sentence = 'This dinner is bad!'
 
 // Regex checks for all occurrences of punctuation
@@ -18,8 +18,9 @@ const sentenceArr = sentence.split(regex)
 const wordNot = sentenceArr.findIndex((x) => x.toLowerCase() === 'not')
 const wordBad = sentenceArr.findIndex((x) => x.toLowerCase() === 'bad')
 
-if (wordNot < wordBad) {
-  sentence = sentence.replace(/not.*bad/gi, 'good')
-}
+sentence = sentence.replace(/not.*bad/gi, 'good')
 
 console.log(sentence)
+
+// if (wordNot < wordBad) {
+// }
