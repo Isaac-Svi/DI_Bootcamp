@@ -22,3 +22,16 @@ const drawStars2 = (numRows) => {
 }
 
 drawStars2(6)
+
+console.log('------------------------')
+
+// Netaniel's 3rd solution
+const drawStars3 = (numRows) => {
+  let str = ''
+
+  for (let i = 0; i < numRows; i++) {
+    console.log((str += '* '))
+  }
+}
+
+drawStars3(6)
