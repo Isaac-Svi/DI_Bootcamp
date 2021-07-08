@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="output"></div>
+
+      <button type="button" class="number" onclick="number(0);">0</button>
+      <button type="button" class="number" onclick="number(1);">1</button>
+      <button type="button" class="number" onclick="number(2);">2</button>
+      <button type="button" class="number" onclick="number(3);">3</button>
+
+      <button type="button" class="number" onclick="number(4);">4</button>
+      <button type="button" class="number" onclick="number(5);">5</button>
+      <button type="button" class="number" onclick="number(6);">6</button>
+      <button type="button" class="number" onclick="number(7);">7</button>
+
+      <button type="button" class="number" onclick="number(8);">8</button>
+      <button type="button" class="number" onclick="number(9);">9</button>
+      <button type="button" class="operator" onclick="operator('.');">.</button>
+      <button type="button" class="operator" onclick="operator('+');">+</button>
+
+      <button type="button" class="operator" onclick="operator('-');">-</button>
+      <button type="button" class="operator" onclick="operator('*');">*</button>
+      <button type="button" class="operator" onclick="operator('/');">/</button>
+      <button type="button" class="operator" onclick="equal();">=</button>
+
+      <button class="reset" onclick="reset()">reset</button>
+      <button class="clear" onclick="backspace()">backspace</button>
+    </div>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
