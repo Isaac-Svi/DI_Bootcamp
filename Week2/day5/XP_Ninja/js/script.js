@@ -19,8 +19,13 @@ while (true) {
 let letter,
   chances = 10
 
-async function gameLoop() {
-  if (chances <= 0) return
+const gameLoop = async function $() {
+  if (!chances) {
+    console.log('YOU LOSE') // log player2 has lost before alerting player1 of win
+    await delay(10)
+    alert('CONGRATS YOU WIN')
+    return
+  }
 
   // show current hidden word
   console.log(game.hiddenWord)
@@ -37,17 +42,20 @@ async function gameLoop() {
   letter = prompt('Guess a letter')
 
   if (!player2.isValidGuess(letter)) {
-    alert('You already guessed that letter.')
-    return gameLoop()
+    alert('Invalid guess')
+    return $()
   }
   // add guess if it's valid
   player2.guesses.add(letter)
+
+  // decrement chances if it's valid
+  chances--
 
   const indexes = game.getIndexesOfGuess(letter)
 
   if (!indexes.length) {
     alert('Incorrect guess')
-    return gameLoop()
+    return $()
   }
 
   game.adjustHiddenWord(indexes)
@@ -59,15 +67,7 @@ async function gameLoop() {
     return
   }
 
-  chances--
-
-  if (game.hiddenWord !== game.word && !chances) {
-    alert('CONGRATS YOU WIN')
-    console.log('YOU LOSE')
-    return
-  }
-
-  gameLoop()
+  $()
 }
 
 gameLoop()

@@ -4,7 +4,7 @@ class Player {
   }
 
   isValidGuess(letter) {
-    if (this.guesses.has(letter)) {
+    if (!letter || this.guesses.has(letter)) {
       return false
     }
 
