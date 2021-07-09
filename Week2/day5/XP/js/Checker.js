@@ -10,9 +10,9 @@ class Checker {
     return { ok: true, error: '' }
   }
 
-  constructor(conditionFunction, conditionFunctionDefaultParams = [], error) {
-    this.check = conditionFunction
+  constructor({ check, error, params = [] }) {
+    this.check = check
     this.error = error
-    this.params = conditionFunctionDefaultParams
+    this.params = params
   }
 }

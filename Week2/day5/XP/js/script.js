@@ -16,11 +16,18 @@ const playTheGame = () => {
 
   // 2 - confirms to play
   const conditions = [
-    new Checker(isValidNumber, 'Sorry Not a number'),
-    new Checker(isWithinRange, [min, max], "Sorry it's not a good number"),
+    new Checker({
+      check: isValidNumber,
+      error: 'Sorry Not a number',
+    }),
+    new Checker({
+      check: isWithinRange,
+      params: [min, max],
+      error: "Sorry it's not a good number",
+    }),
   ]
 
-  do {
+  while (true) {
     let gameInput = Number(prompt(`Enter a number between ${min} and ${max}: `))
 
     const { ok, error } = Checker.testConditions(gameInput, conditions)
@@ -30,19 +37,21 @@ const playTheGame = () => {
       continue
     }
 
+    // only decrementing chances if user has a proper guess
+    chances--
+
     const testResult = test(gameInput, randomNumInRange(min, max))
     alert(
       !testResult
         ? 'WINNER'
+        : !chances
+        ? 'out of chances'
         : testResult > 0
         ? 'Your number is bigger then the computer’s, guess again'
         : 'Your number is smaller then the computer’s, guess again'
     )
 
-    // this means user won
-    if (!testResult) break
-
-    // only decrementing chances if user has a proper guess
-    chances--
-  } while (chances > 0)
+    // this means user won or lost
+    if (!testResult || !chances) return
+  }
 }
