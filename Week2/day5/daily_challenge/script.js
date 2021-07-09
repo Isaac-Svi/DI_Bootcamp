@@ -1,6 +1,5 @@
 // 1
 let numBottles = Number(prompt('Enter a number: '))
-console.log(numBottles)
 
 // 2
 let decrementor = 1
