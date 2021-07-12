@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="window">
+                <div class="left">
+                    <div class="slider login">
+                        <h1>Sign In</h1>
+                        <p>Use Your Email And Password To Sign In</p>
+                        <form onsubmit="event.preventDefault()">
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Sign In</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="middle"></div>
+                <div class="right">
+                    <div class="slider register active">
+                        <h1>Sign Up</h1>
+                        <p>Please, Provide All The Correct Info To Create An Account</p>
+                        <form onsubmit="event.preventDefault()">
+                            <input type="text" placeholder="Full Name" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="register overlay">
+                <h1>Create Account</h1>
+                <p>or</p>
+                <button>Log In</button>
+            </div>
+            <div class="login overlay">
+                <h1>Please, Log In</h1>
+                <p>or</p>
+                <button>Create Account</button>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
