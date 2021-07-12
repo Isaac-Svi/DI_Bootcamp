@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./bg.jpg);
+    background-size: contain;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 20%);
+    z-index: 2;
+    pointer-events: none;
+}
+.drums {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 900px;
+    z-index: 3;
+}
+.drum {
+    margin: 20px;
+    border: 2px solid gold;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0 0 0 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.drum h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 400;
+}
+.drum p {
+    color: gold;
+    font-family: 'Roboto Mono';
+    font-size: 1em;
+}
+.drum:hover {
+    transform: scale(1.07);
+}
+.drum.beat {
+    animation: beat 0.1s;
+}
+@keyframes beat {
+    from {
+        box-shadow: none;
+        transform: scale(1.07);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgb(211, 179, 0);
+        transform: scale(1.2);
+    }
+}
