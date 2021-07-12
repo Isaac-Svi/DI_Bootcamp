@@ -41,7 +41,8 @@ const storyGenerator = () => {
                 `I saw ${name}'s ${adjective} ${noun} ${verb}ing in ${place}.`,
             ]
 
-            obj.shuffle()
+            index = 0
+            document.getElementById('story').innerText = stories[index]
         },
     }
 
