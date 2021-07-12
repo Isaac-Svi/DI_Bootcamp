@@ -41,7 +41,7 @@ for (const color of colorList) {
 
 // fill up grid cells
 const numCols = 60
-const numRows = 60
+const numRows = 50
 const grid = document.querySelector('.grid')
 
 let isMouseDown = false

@@ -5,15 +5,13 @@
     font-family: 'Cascadia Code', 'Segoe UI', sans-serif;
 }
 body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 700px;
 }
 .container {
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 4px 8px -3px rgb(0 0 0 / 20%), 0 8px 16px -5px rgb(0 0 0 / 10%);
-    box-sizing: content-box;
     padding: 10px;
     background-color: lightgray;
     border-radius: 5px;
@@ -56,7 +54,7 @@ body {
 
     display: grid;
     grid-template-columns: repeat(60, 1fr);
-    grid-template-rows: repeat(60, 1fr);
+    grid-template-rows: repeat(50, 1fr);
     background-color: white;
 }
 .grid div {
