@@ -1,0 +1,20 @@
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+table,
+td {
+    border: 0.1px solid;
+    padding: 5px 10px;
+    margin: 5px;
+    border-collapse: collapse;
+}
