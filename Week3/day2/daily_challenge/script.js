@@ -42,7 +42,7 @@ const storyGenerator = () => {
             ]
 
             index = 0
-            document.getElementById('story').innerText = stories[index]
+            document.getElementById('story').innerText = stories[index++]
         },
     }
 
