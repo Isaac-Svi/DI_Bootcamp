@@ -18,8 +18,8 @@ const getValues = () => {
 
 // 3, 4, 5
 const storyGenerator = () => {
-    let index = 0
-    const stories = []
+    let index = 0,
+        stories = []
 
     const obj = {
         shuffle() {
@@ -35,11 +35,11 @@ const storyGenerator = () => {
 
             const [noun, adjective, name, verb, place] = values
 
-            stories.push(
+            stories = [
                 `There once was a ${adjective} ${noun} that ${verb} all of ${name}'s food at ${place}.`,
                 `Watching ${name} ${verb}ing all the ${adjective} ${noun}s at ${place} was quite a site.`,
-                `I saw ${name}'s ${adjective} ${noun} ${verb}ing in ${place}.`
-            )
+                `I saw ${name}'s ${adjective} ${noun} ${verb}ing in ${place}.`,
+            ]
 
             obj.shuffle()
         },
