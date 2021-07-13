@@ -93,6 +93,7 @@ body {
     z-index: 100;
     background-color: #f6f5f7;
     overflow: hidden;
+    pointer-events: all;
 }
 .window .middle {
     background: transparent;
