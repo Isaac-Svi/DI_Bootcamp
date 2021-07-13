@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            .box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+            }
+            button {
+                position: relative;
+                top: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <button class="move">Move box</button>
+        <button class="stop">Stop box</button>
+        <script>
+            const box = document.querySelector('.box')
+            const move = document.querySelector('.move')
+            const stop = document.querySelector('.stop')
+
+            let interval
+
+            move.addEventListener('click', () => {
+                let i = 0
+
+                interval = setInterval(() => {
+                    box.style.transform = `translateX(${(i += 5)}px)`
+                    if (i >= window.innerWidth - box.offsetWidth) {
+                        clearInterval(interval)
+                    }
+                }, 30)
+            })
+
+            stop.addEventListener('click', () => {
+                clearInterval(interval)
+            })
+        </script>
+    </body>
+</html>
