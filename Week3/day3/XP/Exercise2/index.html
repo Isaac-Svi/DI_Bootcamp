@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drag and Drop</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                width: 100%;
+                height: 100vh;
+            }
+            .small {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+            .big {
+                position: absolute;
+                top: 100px;
+                width: 300px;
+                height: 300px;
+                background-color: greenyellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div draggable="true" class="small box"></div>
+        <div class="big box"></div>
+
+        <script>
+            const bigBox = document.querySelector('.big')
+            const smallBox = document.querySelector('.small')
+
+            const handleDragStart = (e) => {
+                const selector = e.target.classList.value.split(' ').join('.')
+                e.dataTransfer.setData('text/plain', selector)
+            }
+
+            const allowDragOver = (e) => {
+                e.preventDefault()
+            }
+
+            const handleDrop = (e) => {
+                const className = e.dataTransfer.getData('text/plain')
+                const el = document.querySelector('.' + className)
+
+                e.target.append(el)
+            }
+
+            smallBox.addEventListener('dragstart', handleDragStart)
+            bigBox.addEventListener('dragover', allowDragOver)
+            bigBox.addEventListener('drop', handleDrop)
+            document.body.addEventListener('dragover', allowDragOver)
+            document.body.addEventListener('drop', handleDrop)
+        </script>
+    </body>
+</html>
