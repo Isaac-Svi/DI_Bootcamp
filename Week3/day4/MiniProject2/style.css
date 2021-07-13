@@ -10,7 +10,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url(./bg.jpg);
+    background-image: url(./images/bg.jpg);
     background-size: contain;
     background-position: center;
 
