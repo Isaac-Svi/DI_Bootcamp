@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter stuff" />
+
+        <script>
+            const input = document.querySelector('input')
+
+            const filterChars = (e) => {
+                const regex = /[A-Za-z]+/g
+
+                if (!regex.test(e.key)) e.preventDefault()
+            }
+
+            input.addEventListener('keydown', filterChars)
+        </script>
+    </body>
+</html>
