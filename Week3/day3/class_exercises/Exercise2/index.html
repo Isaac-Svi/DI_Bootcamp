@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .banner {
+                font-family: monospace;
+                color: steelblue;
+                text-align: center;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="banner" name="banner">The sales end in <span>10</span>min!</h1>
+        <script>
+            const banner = document.querySelector('.banner')
+            const numMins = banner.querySelector('span')
+            setTimeout(() => {
+                banner.style.display = 'block'
+
+                const i = setInterval(() => {
+                    if (!--numMins.innerHTML) {
+                        clearInterval(i)
+                    }
+                }, 1000)
+            }, 5000)
+        </script>
+    </body>
+</html>
