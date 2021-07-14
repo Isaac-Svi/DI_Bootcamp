@@ -42,7 +42,7 @@ class Task {
 
     // 3.4
     doneTask() {
-        this.done = true
+        this.done = !this.done // we toggle if the task is done, just like we toggle the CSS class
         this.$el.children[2].classList.toggle('crossed-out')
     }
 
