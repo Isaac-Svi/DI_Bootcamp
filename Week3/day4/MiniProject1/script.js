@@ -52,14 +52,18 @@ grid.addEventListener('mousedown', handleMouseDown)
 window.addEventListener('mouseup', handleMouseUp)
 
 const colorCell = (e) => {
-    if (!isMouseDown) return
+    // make sure grid mousedown completes before doing doing check for isMouseDown
+    setTimeout(() => {
+        if (!isMouseDown) return
 
-    e.target.style.backgroundColor = currentColor
+        e.target.style.backgroundColor = currentColor
+    }, 0)
 }
 
 for (let i = 0; i < numCols * numRows; i++) {
     const gridItem = document.createElement('div')
     gridItem.addEventListener('mouseover', colorCell)
+    gridItem.addEventListener('mousedown', colorCell)
     grid.append(gridItem)
 }
 
