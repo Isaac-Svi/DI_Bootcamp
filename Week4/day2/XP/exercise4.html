@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const sum = (a, b) => a + b
+            const curriedSum = (a) => (b) => a + b
+            const add5 = curriedSum(5)
+            add5(12)
+
+            // output will be 17
+        </script>
+    </body>
+</html>

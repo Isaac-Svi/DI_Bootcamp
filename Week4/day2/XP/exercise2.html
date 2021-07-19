@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // curried function:
+            // Takes parameter x and returns a function that takes a value y, adds it to x, and returns the sum
+            const addTo = (x) => (y) => x + y
+
+            // addToTen is a reference to the function returned from addTo.  By initializing x as 10, addToTen adds any value provided to it by 10.
+            var addToTen = addTo(10)
+
+            // Therefore, this returns 13.
+            addToTen(3)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // sum is a function that receives 2 numbers and returns their sum
+            const sum = (a, b) => a + b
+
+            // curriedSum is a function that receives one input 'a', returns a function that accepts a parameter 'b', and the returned function returns the sum of a + b when invoked.
+            const curriedSum = (a) => (b) => a + b
+
+            // Therefore, the following will return 31
+            curriedSum(30)(1)
+        </script>
+    </body>
+</html>
