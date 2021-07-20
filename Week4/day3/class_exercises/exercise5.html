@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // initialize prices with array
+            let prices = [12, 20, 18]
+
+            // only copying prices to newPriceArray by VALUE
+            let newPriceArray = [...prices]
+
+            // newPriceArray will have all the same values of prices here, so output will be: [12, 20, 18]
+            console.log(newPriceArray)
+
+            let alphabets = ['A', ...'BCD', 'E']
+            // alphabets should be ['A', 'B', 'C', 'D', E']
+            // this is because spreading 'BCD' is like splitting it by ''
+            console.log(alphabets)
+        </script>
+    </body>
+</html>

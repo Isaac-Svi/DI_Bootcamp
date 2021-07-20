@@ -13,7 +13,8 @@
 
             // with object
             const removeDups = (arr) => {
-                const tracker = {}, newArr = []
+                const tracker = {},
+                    newArr = []
 
                 for (const el of arr) {
                     if (el in tracker) continue
@@ -26,12 +27,13 @@
             console.log(removeDups(colors))
 
             // with set
-            const removeDups2 = (arr) => [... new Set(arr)]
+            const removeDups2 = (arr) => [...new Set(arr)]
             console.log(removeDups2(colors))
 
             // with map
             const removeDups3 = (arr) => {
-                const tracker = new Map(), newArr = []
+                const tracker = new Map(),
+                    newArr = []
 
                 for (const el of arr) {
                     if (tracker.has(el)) continue
@@ -42,6 +44,15 @@
                 return newArr
             }
             console.log(removeDups3(colors))
+
+            // with filter
+            const tracker = {}
+            console.log(
+                colors.filter((c) => (c in tracker ? false : (tracker[c] = true)))
+            )
+
+            // with reduce
+            console.log(colors.reduce((a, b) => (!a.includes(b) ? [...a, b] : a), []))
         </script>
     </body>
 </html>
