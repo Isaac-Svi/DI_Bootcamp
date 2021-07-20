@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let student = [
+                { name: 'Ray', course: 'Computer Science', isPassed: true },
+                { name: 'Liam', course: 'Computer Science', isPassed: false },
+                { name: 'Jenner', course: 'Information Technology', isPassed: true },
+                { name: 'Marco', course: 'Robotics', isPassed: true },
+                { name: 'Kimberly', course: 'Artificial Intelligence', isPassed: false },
+                { name: 'Jamie', course: 'Big Data', isPassed: false },
+            ]
+
+            console.log(
+                student
+                    .filter((s) => s.isPassed)
+                    .map((s) => `Congratulations ${s.name}!`)
+                    .join('\n')
+            )
+        </script>
+    </body>
+</html>
