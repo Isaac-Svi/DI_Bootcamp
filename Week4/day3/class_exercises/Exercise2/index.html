@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const students = [
+                { name: 'Rich', score: 33 },
+                { name: 'Peter', score: 55 },
+            ]
+            //use map to create a new array containing only the score of the students
+
+            const scores = students.map((student) => student.score)
+
+            console.log(scores)
+
+            // ------------------------------------------------------------------------------------
+
+            // use map to create a new array of objects. If the score of the student is bigger than 50 then the object should have another property named "average" set to true, if  the score of the student is less than 50 then the object should have another property named "average" set to false. This is the result that you should get:
+            // const newArrayStudent = [
+            //     { name: 'Rich', score: 33, average: false },
+            //     { name: 'Peter', score: 55, average: true },
+            // ]
+
+            const newArrayStudent = students.map((student) => {
+                student.average = student.score >= 50
+                return student
+            })
+
+            // one liner
+            // const newArrayStudent = students.map(
+            //     (student) => ((student.average = student.score >= 50), student)
+            // )
+            console.log(newArrayStudent)
+        </script>
+    </body>
+</html>
