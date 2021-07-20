@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const letters = ['x', 'y', 'z', 'z']
+
+            // 1
+            const obj = {}
+            for (let i = 0; i < letters.length; i++) {
+                if (!(letters[i] in obj)) {
+                    obj[letters[i]] = 0
+                }
+                obj[letters[i]]++
+            }
+            console.log(obj)
+
+            // 2
+            console.log(
+                letters.reduce((a, b) => {
+                    if (!(b in a)) a[b] = 0
+                    ++a[b]
+                    return a
+                }, {})
+            )
+
+            // 2.1 (one liner)
+            console.log(
+                letters.reduce((a, b) => ({ ...a, [b]: !(b in a) ? 1 : ++a[b] }), {})
+            )
+        </script>
+    </body>
+</html>

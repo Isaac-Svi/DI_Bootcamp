@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const data = [
+                {
+                    name: 'Butters',
+                    age: 3,
+                    type: 'dog',
+                },
+                {
+                    name: 'Cuty',
+                    age: 5,
+                    type: 'rabbit',
+                },
+                {
+                    name: 'Lizzy',
+                    age: 6,
+                    type: 'dog',
+                },
+                {
+                    name: 'Red',
+                    age: 1,
+                    type: 'cat',
+                },
+                {
+                    name: 'Joey',
+                    age: 3,
+                    type: 'dog',
+                },
+                {
+                    name: 'Rex',
+                    age: 10,
+                    type: 'dog',
+                },
+            ]
+
+            const dogYears = (age) => age * 7
+
+            // 1
+            let sum = 0
+            for (const pet of data) {
+                if (pet.type === 'dog') sum += dogYears(pet.age)
+            }
+            console.log(sum)
+
+            // 2
+            sum = 0
+            data.map((pet) => pet.type === 'dog' && (sum += dogYears(pet.age)))
+            console.log(sum)
+
+            // 3
+            sum = 0
+            data.filter((pet) => pet.type === 'dog' && (sum += dogYears(pet.age)))
+            console.log(sum)
+
+            // 4
+            console.log(
+                data.reduce((a, b) => (b.type === 'dog' ? a + dogYears(b.age) : a), 0)
+            )
+        </script>
+    </body>
+</html>

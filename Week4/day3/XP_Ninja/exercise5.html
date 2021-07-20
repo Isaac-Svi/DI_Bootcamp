@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let users = [
+                { firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+                { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+                {
+                    firstName: 'Jonathan',
+                    lastName: 'Baughn',
+                    role: 'Enterprise Instructor',
+                },
+                { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+                { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+                { firstName: 'Wes', lastName: 'Reid', role: 'Instructor' },
+                { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor' },
+            ]
+
+            // using reduce
+            console.log(
+                users.reduce(
+                    (a, b) => ({ ...a, [`${b.firstName} ${b.lastName}`]: b.role }),
+                    {}
+                )
+            )
+
+            // using loop
+            const newObj = {}
+            for (const user of users) {
+                newObj[`${user.firstName} ${user.lastName}`] = user.role
+            }
+            console.log(newObj)
+        </script>
+    </body>
+</html>
