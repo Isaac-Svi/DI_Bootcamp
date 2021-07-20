@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 1
+            const array = [[1], [2], [3], [[[4]]], [[[5]]]].flat(2)
+            console.log(array)
+
+            // 2
+            const greeting = [
+                ['Hello', 'young', 'grasshopper!'],
+                ['you', 'are'],
+                ['learning', 'fast!'],
+            ].map((x) => x.join(' '))
+            console.log(greeting)
+
+            // 3
+            const greeting2 = [
+                ['Hello', 'young', 'grasshopper!'],
+                ['you', 'are'],
+                ['learning', 'fast!'],
+            ]
+                .flat()
+                .join(' ')
+                .replace(/!/, '')
+            console.log(greeting2)
+
+            // 4
+            const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]].flat(
+                Infinity
+            )
+            console.log(trapped)
+        </script>
+    </body>
+</html>

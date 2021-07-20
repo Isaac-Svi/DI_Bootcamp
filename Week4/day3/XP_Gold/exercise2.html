@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            ;[
+                [0, 1],
+                [2, 3],
+            ].reduce(
+                (acc, cur) => {
+                    return acc.concat(cur)
+                },
+                [1, 2]
+            )
+            // Since the reduce function's acc starts off with an initial value of [1, 2], the output will be [1, 2, 0, 1, 2, 3]
+        </script>
+    </body>
+</html>
