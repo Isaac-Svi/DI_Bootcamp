@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //Using filter, create an array with no duplicates
+            const colors = ['blue', 'red', 'blue', 'yellow']
+
+            // with object
+            const removeDups = (arr) => {
+                const tracker = {}, newArr = []
+
+                for (const el of arr) {
+                    if (el in tracker) continue
+                    tracker[el] = true
+                    newArr.push(el)
+                }
+
+                return newArr
+            }
+            console.log(removeDups(colors))
+
+            // with set
+            const removeDups2 = (arr) => [... new Set(arr)]
+            console.log(removeDups2(colors))
+
+            // with map
+            const removeDups3 = (arr) => {
+                const tracker = new Map(), newArr = []
+
+                for (const el of arr) {
+                    if (tracker.has(el)) continue
+                    tracker.set(el, true)
+                    newArr.push(el)
+                }
+
+                return newArr
+            }
+            console.log(removeDups3(colors))
+        </script>
+    </body>
+</html>
