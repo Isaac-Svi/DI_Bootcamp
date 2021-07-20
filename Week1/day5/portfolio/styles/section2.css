@@ -25,6 +25,7 @@
   text-align: left;
   border-left: 4px solid var(--clr-4);
   padding-left: 20px;
+  color: var(--clr-9);
 }
 
 .section2 .description h3 {

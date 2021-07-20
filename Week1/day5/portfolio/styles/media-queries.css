@@ -54,7 +54,7 @@
     border-bottom: 2px solid var(--clr-2);
   }
   input#nav-toggle:checked + nav {
-    height: 15rem;
+    height: 17rem;
   }
   input#nav-toggle:checked + nav ul li {
     opacity: 1;
@@ -70,6 +70,12 @@
   }
   input#nav-toggle:checked + nav .nav-toggler span:nth-child(3) {
     transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  #theme-changer {
+    position: relative;
+    top: -5px;
+    right: 10px;
   }
 }
 

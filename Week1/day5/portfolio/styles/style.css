@@ -22,9 +22,29 @@ html {
   --clr-5: blue;
   --clr-6: gray;
   --clr-7: #d3d3d3;
+  --clr-8: rgb(255 255 255 / 90%);
+  --clr-9: #444;
 
   --side-padding: 20vw;
   --transition: 0.3s;
+}
+
+:root[data-theme='dark'] {
+  --clr-1: #f97300;
+  --clr-2: white;
+  --clr-3: #222;
+  --clr-4: #f97300;
+  --clr-5: blue;
+  --clr-6: #f97300;
+  --clr-7: #555;
+  --clr-8: rgb(0 0 0 / 75%);
+  --clr-9: white;
+}
+
+body *,
+body *::before,
+body *::after {
+  transition: background 0.3s, color 0.3s;
 }
 
 .bg-orange {

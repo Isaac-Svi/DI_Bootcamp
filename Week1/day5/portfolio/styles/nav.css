@@ -27,6 +27,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
@@ -40,4 +41,10 @@ nav a {
 
 input#nav-toggle {
   display: none;
+}
+#theme-changer {
+  all: unset;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
 }
