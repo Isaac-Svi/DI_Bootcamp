@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // when a Bird is created, console will log: "I'm a bird. 🦢"
+            class Bird {
+                constructor() {
+                    console.log("I'm a bird. 🦢")
+                }
+            }
+
+            // when a Flamingo is created, since it extends Bird, console will log: "I'm pink. 🌸", then "I'm a bird. 🦢". This is because super() is called after the console log in line 21.
+            class Flamingo extends Bird {
+                constructor() {
+                    console.log("I'm pink. 🌸")
+                    super()
+                }
+            }
+
+            const pet = new Flamingo()
+
+            // Therefore, since new Flamingo is created, output will be:
+            // I'm pink. 🌸
+            // I'm a bird. 🦢
+        </script>
+    </body>
+</html>
