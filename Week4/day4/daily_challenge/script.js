@@ -13,13 +13,11 @@ class Video {
 }
 
 // 3
-const v = new Video('Scary Movie', 'abc', '30')
+const v = new Video('Scary Movie', 'abc', 30)
+v.watch()
 
 // 4
-const v2 = new Video('Scary Movie 2', 'abc', '60')
-
-console.log(v)
-console.log(v2)
+const v2 = new Video('Scary Movie 2', 'abc', 60)
 
 // 5 - Bonus
 // could have also used an object, but it would take more time to destructure it.
