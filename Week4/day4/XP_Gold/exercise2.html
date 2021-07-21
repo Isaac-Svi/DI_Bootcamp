@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Techincally could do this:
+            const jsKandV = (obj) => {
+                return [Object.keys(obj), Object.values(obj)]
+            }
+
+            // 1
+            const keysAndValues = (obj) => {
+                const keys = [],
+                    vals = []
+
+                for (const key in obj) {
+                    keys.push(key)
+                    vals.push(obj[key])
+                }
+
+                return [keys, vals]
+            }
+
+            console.log(jsKandV({ a: 1, b: 2, c: 3 }))
+            console.log(keysAndValues({ a: 1, b: 2, c: 3 }))
+
+            // 2
+            const keysAndValuesSort = (obj) => {
+                let keys = [],
+                    vals = []
+
+                for (const key in obj) {
+                    keys.push(key)
+                }
+
+                // sort them alphabetically
+                keys.sort()
+
+                for (const key of keys) {
+                    vals.push(obj[key])
+                }
+
+                return [keys, vals]
+            }
+            const jsKandVSort = (obj) => {
+                let keys = Object.keys(obj).sort(),
+                    vals = []
+
+                for (const key of keys) {
+                    vals.push(obj[key])
+                }
+
+                return [keys, vals]
+            }
+            console.log(keysAndValues({ b: 2, c: 3, a: 1 })) // unsorted
+            console.log(keysAndValuesSort({ b: 2, c: 3, a: 1 })) // sorted
+            console.log(jsKandVSort({ b: 2, c: 3, a: 1 })) // sorted
+        </script>
+    </body>
+</html>

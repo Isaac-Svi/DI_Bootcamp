@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // class Counter with one attribute "count" and one method "increment", which increases count by 1 each time it's called
+            class Counter {
+                constructor() {
+                    this.count = 0
+                }
+
+                increment() {
+                    this.count++
+                }
+            }
+
+            // create new Counter and store it in counterOne
+            const counterOne = new Counter()
+
+            // we increment this.count of counterOne twice, so count of counterOne will be 2
+            counterOne.increment()
+            counterOne.increment()
+
+            // store reference to counterOne in counterTwo
+            const counterTwo = counterOne
+
+            // we increment this.count of counterTwo once, so count of counterTwo will now be 3, because counterTwo is pointing to counterOne, which means that both count of counterOne and count of counterTwo will be 3
+            counterTwo.increment()
+
+            // outut will be 3, since count of counterOne is 3
+            console.log(counterOne.count)
+        </script>
+    </body>
+</html>
