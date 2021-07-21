@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const student = {
+                name: 'John Doe',
+                age: 16,
+                scores: {
+                    maths: 74,
+                    english: 63,
+                },
+            }
+            // 1: Copy the object into another one (1 spread opeator)
+            // 2: To allow copying the nested object, use 2 spread operator
+            // 3: Create a new object that is equal to the student object, with another property called goodstudent = true
+
+            // 1
+            const studentCopy = { ...student }
+
+            // 2
+            const studentCopy2 = { ...student, scores: { ...student.scores } }
+
+            // 3
+            const studentCopy3 = {
+                ...student,
+                scores: { ...student.scores },
+                goodstudent: true,
+            }
+
+            student.scores.maths = 30
+            console.log(student, studentCopy, studentCopy2, studentCopy3)
+
+            // difference between studentCopy and studentCopy2 is that if you try to change the value of a score in student, that value will be updated in studentCopy, but it won't be updated in studentCopy2.
+            // same for studentCopy3 btw.
+        </script>
+    </body>
+</html>

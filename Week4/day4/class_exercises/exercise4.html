@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            class Rabbit {
+                constructor(type) {
+                    this.type = type
+                }
+                speak(line) {
+                    console.log(`The ${this.type} rabbit says '${line}'`)
+                }
+            }
+            let killerRabbit = new Rabbit('killer')
+            let blackRabbit = new Rabbit('black')
+
+            console.log(
+                `killerRabbit type: ${killerRabbit.type}\nblackRabbit type: ${blackRabbit.type}`
+            )
+
+            killerRabbit.speak('You look like lunch...')
+            blackRabbit.speak("I thought rabbits didn't eat meat!")
+        </script>
+    </body>
+</html>
