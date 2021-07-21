@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            class Dog {
+                constructor(name) {
+                    this.name = name
+                }
+            }
+
+            // 1 - Won't succeed, because we're not setting the "name" property.
+            class Labrador extends Dog {
+                constructor(name, size) {
+                    this.size = size
+                }
+            }
+
+            // 2 - Will succeed. Uses the Dog constructor to set the name property using the "super" function.  The additional property "size" is also set in the new Labrador constructor.
+            class Labrador extends Dog {
+                constructor(name, size) {
+                    super(name)
+                    this.size = size
+                }
+            }
+
+            // 3 - Will sort of succeed.  Name property isn't coming from anywhere, but because the super function is called, name just gets set to "".
+            class Labrador extends Dog {
+                constructor(size) {
+                    super(name)
+                    this.size = size
+                }
+            }
+
+            // 4 - Won't succeed. Even though we are setting the right properties, a derived class must use the super function in its constructor.
+            class Labrador extends Dog {
+                constructor(name, size) {
+                    this.name = name
+                    this.size = size
+                }
+            }
+
+            const l = new Labrador('Rex', '20')
+            console.log(l)
+        </script>
+    </body>
+</html>

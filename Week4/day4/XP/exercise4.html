@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Making a class Person that creates person obects which required one argument for 'name'.  Persons only have one attribute: "name".
+            class Person {
+                constructor(name) {
+                    this.name = name
+                }
+            }
+
+            // We create a new Person with a name of "John" and store it in "member".
+            const member = new Person('John')
+
+            // Since Person is an object, type of member will be "object".
+            console.log(typeof member)
+        </script>
+    </body>
+</html>

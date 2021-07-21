@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 1
+            console.log([2] === [2]) // -> false
+            console.log({} === {}) // -> false
+            // They're separate arrays/objects, which have different addresses in stack, so they're not equal
+
+            // 2
+            const object1 = { number: 5 } // 5
+            const object2 = object1 // 5
+            const object3 = object2 // 5
+            const object4 = { number: 5 } // 5
+
+            // after this line, objects 1 through 3 change:
+            object1.number = 4
+            // object1.number is 4
+            // object2.number is 4
+            // object3.number is 4
+            // object4.number is 5
+
+            console.log(object1, object2, object3, object4)
+
+            // 3
+            class Animal {
+                constructor(name, type, color) {
+                    this.name = name
+                    this.type = type
+                    this.color = color
+                }
+            }
+
+            // 4
+            class Mamal extends Animal {
+                sound() {
+                    console.log(this.name, this.type, this.color)
+                }
+            }
+
+            // 5
+            const cow = new Mamal('bess,', 'cow,', 'black and white')
+            cow.sound()
+        </script>
+    </body>
+</html>
