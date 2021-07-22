@@ -11,11 +11,7 @@ class Card {
         this.image = image
         this.isAppended = false
 
-        this.$el = createElement('div', {
-            'data-username': this.username,
-            'data-id': this.id,
-            class: 'card',
-        })
+        this.$el = createElement('div', { class: 'card' })
 
         this.setupEl()
     }
