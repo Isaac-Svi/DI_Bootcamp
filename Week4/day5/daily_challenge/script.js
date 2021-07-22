@@ -1,8 +1,8 @@
 const checkAnagram = (s1, s2) => {
-    s1 = s1.replace(/\s/g, '').toLowerCase().split('').sort().join('')
-    s2 = s2.replace(/\s/g, '').toLowerCase().split('').sort().join('')
-
-    return s1 === s2
+    return (
+        s1.replace(/\s/g, '').toLowerCase().split('').sort().join('') ===
+        s2.replace(/\s/g, '').toLowerCase().split('').sort().join('')
+    )
 }
 
 console.log(checkAnagram('Astronomer', 'Moon starrer'))
