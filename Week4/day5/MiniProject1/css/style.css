@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+:root {
+    --clr-1: #69df81;
+    --clr-2: #c9d6e5;
+    --clr-3: #6356cd;
+    --clr-4: #52bfc4;
+    --clr-5: #2a3c50;
+    --clr-6: #2f3952;
+    --clr-7: #256d7b;
+    --clr-8: #273445;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: var(--clr-1);
+    background-image: url(../assets/svgs/gears.svg);
+    background-size: contain;
+    display: flex;
+}
+#logo {
+    color: var(--clr-5);
+    font-weight: 500;
+    margin-right: 20px;
+    font-family: 'SEGA LOGO FONT', sans-serif;
+}
+nav input {
+    width: clamp(200px, 80%, 500px);
+    background-color: var(--clr-2);
+    padding: 5px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s;
+    border-radius: 3px;
+}
+nav input:focus {
+    box-shadow: 0 0 3px 2px var(--clr-3);
+}
+main {
+    padding: 50px;
+    width: 100%;
+    flex: 1;
+    background-color: var(--clr-3);
+    background-image: url(../assets/images/circuit-pattern.png);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
