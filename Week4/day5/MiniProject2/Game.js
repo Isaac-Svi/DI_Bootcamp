@@ -101,7 +101,8 @@ class Game {
         if (won) {
             this.displayWin('Congratulations! You Won!', 'win', combo)
             return
-        } else if (combo) {
+        }
+        if (combo) {
             this.displayTie()
             return
         }
@@ -136,7 +137,9 @@ class Game {
 
         if (won) {
             this.displayWin('You lost!', 'lost', combo)
-        } else if (combo) {
+            return
+        }
+        if (combo) {
             this.displayTie()
         }
     }
