@@ -9,7 +9,6 @@ class Card {
         this.email = email
         this.username = username
         this.image = image
-        this.isAppended = false
 
         this.$el = createElement('div', { class: 'card' })
 
@@ -35,7 +34,6 @@ class Card {
 const robotElements = []
 for (const robot of robots) {
     const robotElement = new Card(robot)
-    robotElement.isAppended = true
     robotElements.push(robotElement)
     roboGrid.append(robotElement.$el)
 }
