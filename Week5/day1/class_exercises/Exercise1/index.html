@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            table,
+            td,
+            th {
+                margin-top: 10px;
+                border: 0.1px solid;
+                border-collapse: collapse;
+            }
+            td,
+            th {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="index.html" method="GET">
+            <div>
+                <label for="username">What is your username</label>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Your username"
+                />
+            </div>
+            <div>
+                <label for="password">What is your password</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Your password"
+                />
+            </div>
+            <div>
+                <button type="submit">Send my greetings</button>
+            </div>
+        </form>
+        <table>
+            <tbody></tbody>
+        </table>
+        <script src="./script.js"></script>
+    </body>
+</html>
