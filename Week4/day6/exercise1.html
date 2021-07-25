@@ -57,6 +57,31 @@
             }
 
             console.log(answer2(input2))
+
+            // extra
+            // map allows you to sort by value and type, since map keys differentiate based on type as well
+            const input3 = [1, 2, '1', 4, 591, 392, 391, 2, 5, 10, 2, '1', 1, 20, 20]
+
+            const answer3 = (arr) => {
+                const tracker = new Map()
+
+                for (const el of arr) {
+                    if (!tracker.has(el)) {
+                        tracker.set(el, el)
+                        continue
+                    }
+
+                    if (!Array.isArray(tracker.get(el))) {
+                        tracker.set(el, [el])
+                    }
+                    tracker.get(el).push(el)
+                }
+
+                return [...tracker.values()]
+            }
+
+            console.log(answer(input3))
+            console.log(answer3(input3))
         </script>
     </body>
 </html>
