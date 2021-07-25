@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const hexToRgb = (input) => {
+                if (input.includes('#')) {
+                    // first '.' is any character
+                    // second '.' is selector for next char
+                    // putting '?' after second '.' makes second character optional
+                    let [r, g, b] = input.replace('#', '').match(/..?/g)
+                    r = parseInt(r, 16)
+                    g = parseInt(g, 16)
+                    b = parseInt(b, 16)
+
+                    return `rgb(${r}, ${g}, ${b})`
+                }
+
+                if (input.includes('(')) {
+                    const [r, g, b] = input
+                        .replace(/[rgb()]|\s/g, '')
+                        .split(',')
+                        .map((x) => Number(x).toString(16))
+
+                    return `#${r}${g}${b}`
+                }
+
+                return 'Error: Incorrectly formatted input.'
+            }
+
+            console.log(hexToRgb('#235789'))
+            console.log(hexToRgb('rgb(35, 87, 137)'))
+            console.log(hexToRgb('asdfasdf'))
+        </script>
+    </body>
+</html>
