@@ -47,7 +47,7 @@ document.forms[0].addEventListener('submit', (e) => {
             createElement('img', '', { src: url, height }),
             createElement('p', e.target.search.value),
             createElement('button', 'Delete', {
-                onclick: `(event => event.target.parentNode.remove())(event)`,
+                onclick: `(() => this.parentNode.remove())()`,
             })
         )
 
