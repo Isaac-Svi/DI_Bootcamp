@@ -45,7 +45,7 @@ document.forms[0].addEventListener('submit', (e) => {
 
         imgContainer.appendMany(
             createElement('img', '', { src: url, height }),
-            createElement('p', e.target.name.value),
+            createElement('p', e.target.search.value),
             createElement('button', 'Delete', {
                 onclick: `(event => event.target.parentNode.remove())(event)`,
             })
