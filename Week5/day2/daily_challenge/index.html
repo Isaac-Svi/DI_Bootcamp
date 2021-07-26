@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .output {
+                width: 80%;
+                max-width: 600px;
+                margin: auto;
+            }
+            .img-container {
+                margin: 20px;
+                box-shadow: 0 4px 8px -3px rgb(0 0 0 / 20%),
+                    0 8px 16px -5px rgb(0 0 0 / 10%);
+                border-radius: 5px;
+                overflow: hidden;
+                padding: 10px;
+            }
+            .img-container img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" />
+            <button>Go</button>
+        </form>
+        <button id="delete">Delete all</button>
+        <div class="output"></div>
+        <script src="./script.js"></script>
+    </body>
+</html>
