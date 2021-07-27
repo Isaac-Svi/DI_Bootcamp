@@ -67,7 +67,13 @@ const toMorse = (morseJS) =>
         resolve(translation)
     })
 
-const joinWords = (translation) => translation.join('\n')
+const joinWords = (translation) =>
+    new Promise((resolve, reject) => {
+        if (!Array.isArray(translation)) {
+            reject('Invalid input')
+        }
+        resolve(translation.join('\n'))
+    })
 
 toJS(morse)
     .then((x) => toMorse(x))
