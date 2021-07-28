@@ -75,14 +75,10 @@ const joinWords = (translation) =>
         resolve(translation.join('\n'))
     })
 
-// toJS(morse)
-//     .then((x) => toMorse(x))
-//     .then((x) => joinWords(x))
-//     .then((x) => console.log(x))
-//     .catch((err) => console.log(err.message))
-
 toJS(morse)
-    .then(toMorse)
-    .then(joinWords)
+    .then((x) => toMorse(x))
+    .then((x) => joinWords(x))
     .then((x) => console.log(x))
     .catch((err) => console.log(err.message))
+
+toJS(morse).then(toMorse).then(joinWords).then(console.log).catch(console.log)
