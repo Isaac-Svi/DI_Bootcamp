@@ -1,0 +1,114 @@
+:root {
+    font-size: calc(10px + 0.4vh + 0.5vw);
+}
+
+button {
+    border: none;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.game-container {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(./images/pokedex.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40rem;
+    height: 40rem;
+}
+.screen {
+    position: absolute;
+    top: 7.75em;
+    left: 49.5%;
+    transform: translateX(-50%);
+    width: 13.45rem;
+    height: 9.75rem;
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.details {
+    position: absolute;
+    top: 22.5em;
+    left: 49.2%;
+    transform: translateX(-50%);
+    width: 13.4rem;
+    height: 9.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.details h1 {
+    margin: 0;
+    padding: 10px;
+}
+.details p {
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.history-buttons {
+    position: absolute;
+    top: 26.4rem;
+    left: 6.45rem;
+    width: 5rem;
+    height: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.history-buttons button {
+    flex: 0.5;
+    background: lightgreen;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.history-buttons button:hover,
+.new-button button:hover {
+    opacity: 0.75;
+    filter: brightness(1.2) saturate(100%);
+}
+
+.new-button {
+    position: absolute;
+    display: block;
+    top: 25.25rem;
+    right: 3.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+}
+
+.new-button button {
+    flex: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    background: lightgreen;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader img {
+    width: 50%;
+}
+
+.success,
+.loader,
+.error,
+.screen {
+    display: none;
+}
