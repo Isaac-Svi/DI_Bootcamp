@@ -30,7 +30,7 @@ const capitalize = (word) => word[0].toUpperCase() + word.slice(1)
 const getPokemon = async (id) => {
     try {
         // up to 898 different pokemon from api
-        currentPokemonId = id || getRandomNum(1, 898)
+        currentPokemonId = id ? id : getRandomNum(1, 898)
 
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentPokemonId}`)
         const {
@@ -55,7 +55,7 @@ const getPokemon = async (id) => {
     }
 }
 
-const setPokemon = async () => {
+const setPokemon = async (_, id = null) => {
     const getElements = elementReferences()
 
     const { loader, error, success, screen } = getElements()
@@ -66,7 +66,7 @@ const setPokemon = async () => {
     loader.style.display = 'block'
 
     try {
-        const pokemon = await getPokemon()
+        const pokemon = await getPokemon(id)
         const { name, order, height, weight, type, img } = getElements()
 
         name.innerText = pokemon.name
@@ -86,9 +86,9 @@ const setPokemon = async () => {
 }
 
 elementReferences()().new.addEventListener('click', setPokemon)
-elementReferences()().forward.addEventListener('click', () => {
-    setPokemon(currentPokemonId + 1)
+elementReferences()().forward.addEventListener('click', (e) => {
+    setPokemon(e, currentPokemonId + 1)
 })
-elementReferences()().back.addEventListener('click', () => {
-    setPokemon(currentPokemonId - 1)
+elementReferences()().back.addEventListener('click', (e) => {
+    setPokemon(e, currentPokemonId - 1)
 })
