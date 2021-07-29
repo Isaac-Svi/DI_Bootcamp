@@ -57,8 +57,11 @@ const createOption = (value, text) => {
     const { from, to } = getElements()
 
     try {
-        const currencyList = await fetchCountryList()
-        const { quotes } = await fetchConversionRates()
+        const [currencyList, { quotes }] = await Promise.all([
+            fetchCountryList(),
+            fetchConversionRates(),
+        ])
+
         for (const key in quotes) {
             const countryCode = key.replace('USD', '')
 
