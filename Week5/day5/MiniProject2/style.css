@@ -2,30 +2,58 @@
     font-size: calc(10px + 0.4vh + 0.5vw);
 }
 
+@media (max-width: 600px) {
+    :root {
+        font-size: calc(6px + 0.4vh + 0.5vw);
+    }
+    .game-container {
+        width: 100vw;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+header img {
+    margin-bottom: 20px;
+}
+.instructions {
+    max-width: 700px;
+}
+.instructions h2 {
+    padding: 0;
+    margin: 0;
+}
+.instructions ol {
+    padding-left: 15px;
+}
+
 button {
     border: none;
     transition: filter 0.3s, opacity 0.3s;
 }
 
 .game-container {
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: auto;
     background-image: url(./images/pokedex.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     width: 40rem;
-    height: 40rem;
+    height: 25rem;
 }
+
 .screen {
     position: absolute;
-    top: 7.75em;
+    top: 1.5em;
     left: 49.5%;
     transform: translateX(-50%);
-    width: 13.45rem;
-    height: 9.75rem;
+    width: 12rem;
+    height: 9rem;
 }
 
 .screen img {
@@ -36,11 +64,11 @@ button {
 
 .details {
     position: absolute;
-    top: 22.5em;
-    left: 49.2%;
+    top: 14.5em;
+    left: 49.3%;
     transform: translateX(-50%);
-    width: 13.4rem;
-    height: 9.75rem;
+    width: 12rem;
+    height: 9rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -57,10 +85,10 @@ button {
 
 .history-buttons {
     position: absolute;
-    top: 26.4rem;
-    left: 6.45rem;
-    width: 5rem;
-    height: 1.6rem;
+    top: 18.2rem;
+    left: 7.95rem;
+    width: 4.5rem;
+    height: 1.3rem;
     display: flex;
     justify-content: space-between;
 }
@@ -80,8 +108,8 @@ button {
 .new-button {
     position: absolute;
     display: block;
-    top: 25.25rem;
-    right: 3.5rem;
+    top: 16.9rem;
+    right: 5.25rem;
     width: 4rem;
     height: 4rem;
     display: flex;
@@ -111,4 +139,9 @@ button {
 .error,
 .screen {
     display: none;
+}
+.error {
+    flex: 1;
+    text-align: center;
+    padding-top: 25%;
 }
