@@ -1,0 +1,39 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+button,
+.output {
+    border-radius: 10px;
+    border: 2px solid yellow;
+}
+button {
+    background-color: white;
+    color: black;
+    padding: 7px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.loader,
+.error,
+.details {
+    display: none;
+}
+.output {
+    text-align: center;
+    padding: 20px;
+    min-width: 550px;
+    min-height: 200px;
+}
+i {
+    font-size: 50px;
+}
