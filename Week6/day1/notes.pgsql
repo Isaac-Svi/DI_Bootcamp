@@ -70,4 +70,5 @@
 -- SELECT * FROM actors WHERE number_oscars >= 5;
 
 
-
+-- You can also use the AGE function to get the age of someone from a date.
+-- SELECT first_name, last_name, number_oscars, AGE(date_birth) FROM actors WHERE number_oscars > 2;
