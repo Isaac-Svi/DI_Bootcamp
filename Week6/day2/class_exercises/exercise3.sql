@@ -254,7 +254,7 @@ FROM
 WHERE
     DepartmentCode = 10;
 
---2: There are 0. (Except for anaylyst ;p)
+--2: There are 0. (Except for anaylyst ;p.  Just updated, so it should be 1 now.)
 SELECT
     COUNT(*)
 FROM
