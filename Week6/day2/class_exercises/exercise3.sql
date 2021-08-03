@@ -6,6 +6,13 @@ CREATE TABLE department (
     Location VARCHAR(33) UNIQUE
 );
 
+-- Should have just done this:
+-- CREATE TABLE department (
+--     DEPTCODE SERIAL PRIMARY KEY DEFAULT NEXTVAL('department_sequence'),
+--     DeptName CHAR(30),
+--     Location VARCHAR(33) UNIQUE
+-- );
+--
 CREATE TABLE employee (
     EmpCode INTEGER PRIMARY KEY,
     EmpFName VARCHAR(15) NOT NULL,
@@ -239,7 +246,7 @@ VALUES
     );
 
 -- III
---1
+--1: There are 3 in dep. 10.
 SELECT
     COUNT(*)
 FROM
@@ -247,12 +254,13 @@ FROM
 WHERE
     DepartmentCode = 10;
 
---2
+--2: There are 0. (Except for anaylyst ;p)
 SELECT
     COUNT(*)
 FROM
     employee
 WHERE
+    DepartmentCode = 10,
     Job ILIKE 'analyst';
 
 --3
@@ -275,9 +283,9 @@ FROM
     employee
     INNER JOIN department ON department.DEPTCODE = employee.DepartmentCode;
 
---4
+--4: 3066.67
 SELECT
-    AVG(salary)
+    ROUND(AVG(salary), 2)
 FROM
     employee
 WHERE
@@ -293,7 +301,7 @@ FROM
     employee
     LEFT JOIN department ON department.DEPTCODE = employee.DepartmentCode;
 
---6
+--6: You don't need the second order, because it is ignored and the first order is made to be a priority.
 SELECT
     EMPFNAME,
     EMPLNAME,
@@ -316,7 +324,7 @@ FROM
 GROUP BY
     EMPFNAME;
 
---8
+--8: 7000
 SELECT
     MAX(SALARY)
 FROM
