@@ -110,7 +110,37 @@ SELECT
     title,
     description,
     rental_rate,
-    replacement_cost
+    replacement_cost,
+    x.customer_id
+FROM
+    inventory
+    INNER JOIN film ON film.film_id = inventory.film_id
+    INNER JOIN (
+        SELECT
+            inventory_id,
+            b.customer_id
+        FROM
+            rental
+            INNER JOIN (
+                SELECT
+                    customer_id
+                FROM
+                    customer
+                WHERE
+                    first_name = 'Matthew'
+                    AND last_name = 'Mahan'
+            ) as b ON rental.customer_id = b.customer_id
+    ) as x ON x.inventory_id = inventory.inventory_id
+WHERE
+    description ILIKE '%boat%'
+    OR title ILIKE '%boat%'
+ORDER BY
+    replacement_cost DESC
+limit
+    1;
+
+SELECT
+    *
 FROM
     inventory
     INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
@@ -128,6 +158,6 @@ WHERE
     AND description ILIKE '%boat%'
     OR title ILIKE '%boat%'
 ORDER BY
-    film.replacement_cost DESC
+    film.replacement_cost
 LIMIT
     1;
