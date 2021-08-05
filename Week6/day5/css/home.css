@@ -1,0 +1,16 @@
+.notification {
+    position: absolute;
+    right: -300px;
+    bottom: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-image: var(--grd-1);
+    box-shadow: var(--shadow-1);
+    transition: 0.3s;
+    transition-delay: right 0.3s, opacity 0.3s;
+}
+.notification.active {
+    display: block;
+    right: 10px;
+    opacity: 1;
+}

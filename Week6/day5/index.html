@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/home.css" />
+        <link rel="stylesheet" href="./css/form.css" />
+    </head>
+    <body>
+        <div class="notification">
+            todo added
+            <a href="./tasks.html">see todos</a>
+            <button class="close" onclick="this.parentNode.remove()">x</button>
+        </div>
+        <form class="add-todo">
+            <h2>Todo List</h2>
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input required id="name" type="text" name="name" />
+            </div>
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div class="input-group date-time">
+                <label for="start">Start</label>
+                <input required id="start" type="datetime-local" name="start-date" />
+            </div>
+            <div class="input-group date-time">
+                <label for="end">End</label>
+                <input required id="end" type="datetime-local" name="end-date" />
+            </div>
+            <button>Add task</button>
+        </form>
+        <script src="./js/utils.js"></script>
+        <script src="./js/home.js"></script>
+    </body>
+</html>

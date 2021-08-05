@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', monospace;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+:root {
+    font-size: 1.1rem;
+
+    --clr-1: #222;
+    --clr-2: #444;
+    --clr-3: #777;
+    --clr-4: rgb(25, 241, 25);
+
+    --grd-1: linear-gradient(135deg, var(--clr-1), var(--clr-1), var(--clr-2));
+
+    --shadow-1: 0 0 6px -2px var(--clr-4);
+    --shadow-2: 0 0 4px -3px var(--clr-4);
+}
+body {
+    min-height: 100vh;
+    background-image: var(--grd-1);
+    color: var(--clr-4);
+    overflow-x: hidden;
+}
+a {
+    color: inherit;
+}
+input,
+textarea,
+button {
+    background: transparent;
+    color: var(--clr-4);
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow-2);
+    border-radius: 5px;
+}
+button {
+    cursor: pointer;
+}
+button > * {
+    pointer-events: none;
+}
+input[type='datetime-local'] {
+    user-select: none;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+    cursor: pointer;
+}
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background-color: var(--clr-4);
+    color: var(--clr-1);
+    outline: none;
+}
+textarea {
+    resize: none;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: var(--clr-2);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: green;
+}
