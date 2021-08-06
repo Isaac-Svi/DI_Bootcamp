@@ -40,7 +40,7 @@ const partitionMs = (ms) => {
         (hours > 0 ? (hours < 10 ? `0${hours}` : hours) + ':' : '') +
         (minutes > 0 ? (minutes < 10 ? `0${minutes}` : minutes) + ':' : '') +
         (seconds > 0 ? (seconds < 10 ? `0${seconds}` : seconds) + ':' : '') +
-        (ms > 0 ? (ms + '').slice(0, 2) : '')
+        (ms > 0 ? ((ms < 0 ? `0${ms}` : ms) + '').slice(0, 2) : '')
 
     return result
 }

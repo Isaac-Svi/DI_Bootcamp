@@ -18,7 +18,7 @@ h2:not(.task h2, .add-todo h2) {
     background-image: var(--grd-1);
     height: 125px;
     overflow: hidden;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 .task.overdue {
     --text-color: rgb(255, 94, 0);
@@ -89,7 +89,7 @@ h2:not(.task h2, .add-todo h2) {
     flex: 1;
     padding: 0 10px;
     width: 100%;
-    color: var(--clr-3);
+    color: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,7 +98,6 @@ h2:not(.task h2, .add-todo h2) {
 }
 .action-menu button:hover {
     filter: brightness(1.2);
-    color: var(--clr-4);
 }
 
 .checkbox-group {
@@ -142,6 +141,7 @@ h2:not(.task h2, .add-todo h2) {
 }
 
 .add-todo.modal {
+    position: fixed;
     opacity: 0;
     top: -100vh;
     transition: 0.3s;

@@ -114,10 +114,11 @@ const saveEdits = (e) => {
 }
 
 const toggleMenu = (menu) => {
-    const activeMenu = document.querySelector('.action-menu.active')
-    if (activeMenu) activeMenu.classList.remove('active')
-
-    if (menu) menu.classList.add('active')
+    if (menu) menu.classList.toggle('active')
+    else {
+        const activeMenu = document.querySelector('.action-menu.active')
+        if (activeMenu) activeMenu.classList.remove('active')
+    }
 }
 
 const closeModal = (modal) => toggleEditModal(modal)
@@ -148,16 +149,14 @@ const setupTodos = () => {
                 }),
                 createElement({ attributes: { class: 'details' } }).appendMany(
                     createElement({
-                        html: `Start -  <span class="editable">${new Date(
-                            start
-                        ).toLocaleDateString()}</span>`,
+                        text: `Start - ${new Date(start).toLocaleDateString()}`,
                     }),
                     createElement({
                         text: done ? 'complete' : displayTimeLeft(timeLeft),
                     })
                 ),
                 createElement({
-                    html: `<br>Description - <br> <span class="editable">${description}</span>`,
+                    text: `\nDescription - \n ${description}`,
                     attributes: { class: 'description' },
                 }),
                 createElement({
