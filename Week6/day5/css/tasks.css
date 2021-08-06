@@ -18,7 +18,7 @@ h2:not(.task h2, .add-todo h2) {
     background-image: var(--grd-1);
     height: 125px;
     overflow: hidden;
-    transition: 0.15s;
+    transition: 0.25s;
 }
 .task.overdue {
     --text-color: rgb(255, 94, 0);
@@ -175,4 +175,18 @@ h2:not(.task h2, .add-todo h2) {
 .overlay.active {
     opacity: 0.9;
     pointer-events: all;
+}
+
+.fade-out {
+    animation: fade-out 0.2s forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
 }

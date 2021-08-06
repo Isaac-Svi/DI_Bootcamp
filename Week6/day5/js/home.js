@@ -40,7 +40,9 @@ const handleSubmit = (e) => {
 
     e.target.reset()
 
-    notification.classList.toggle('active')
+    notification.classList.add('active')
+
+    setTimeout(() => notification.classList.remove('active'), 3000)
 }
 
 elements().form.addEventListener('submit', handleSubmit)

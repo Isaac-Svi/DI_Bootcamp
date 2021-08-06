@@ -58,3 +58,5 @@ const getRandomId = (len = 7) => {
     }
     return id
 }
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms))

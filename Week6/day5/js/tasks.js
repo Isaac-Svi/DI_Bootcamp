@@ -55,13 +55,17 @@ const getTimeLeft = (start, end) => {
     return timeLeft ? timeLeft : 0
 }
 
-const deleteTask = (e) => {
+const deleteTask = async (e) => {
     const todos = JSON.parse(localStorage.getItem('todos'))
     const task = e.target.parentNode.parentNode
 
     const todoIndex = todos.findIndex((x) => x.id === task.id)
     todos.splice(todoIndex, 1)
     localStorage.setItem('todos', JSON.stringify(todos))
+
+    task.classList.add('fade-out')
+
+    await delay(220)
 
     task.remove()
 }
