@@ -13,7 +13,9 @@
         <div class="notification">
             todo added
             <a href="./tasks.html">see todos</a>
-            <button class="close" onclick="this.parentNode.remove()">x</button>
+            <button class="close" onclick="this.parentNode.classList.toggle('active')">
+                x
+            </button>
         </div>
         <form class="add-todo">
             <h2>Todo List</h2>

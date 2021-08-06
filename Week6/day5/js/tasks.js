@@ -37,6 +37,7 @@ const toggleTaskState = (e) => {
         $todo.querySelector('.details').children[1].innerText = displayTimeLeft(timeLeft)
     } else if (timeLeft && done) {
         $todo.classList.remove('todo')
+        $todo.querySelector('.details').children[1].innerText = 'complete'
     } else {
         if (timeLeft && !done) $todo.classList.add('todo')
         $todo.classList.remove('overdue')
