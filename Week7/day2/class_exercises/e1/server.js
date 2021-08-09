@@ -26,12 +26,10 @@ app.route('/login-fetch')
     .get((req, res) => {
         const { username, password } = req.query
         res.send({ username, password })
-        res.end()
     })
     .post((req, res) => {
         const { username, password } = req.body
         res.send({ username, password })
-        res.end()
     })
 
 app.post('/test', (req, res) => {
