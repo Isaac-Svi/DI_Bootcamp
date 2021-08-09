@@ -1,0 +1,29 @@
+{
+  "name": "day2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:c:example:1": "nodemon class_exercises/e1/server",
+    "start:c:example:2": "nodemon class_exercises/e2/server",
+    "start:xp:1": "nodemon XP/Exercise1/node-server/myserver.js",
+    "start:xp:2": "nodemon XP/Exercise2/server.js",
+    "start:xp:3": "nodemon XP/Exercise3/serverExpress.js",
+    "start:xp2:1": "nodemon XP2/Exercise1/server.js",
+    "start:xp2:2": "nodemon XP2/Exercise2/server.js",
+    "start:xp2:3": "nodemon XP2/Exercise3/server.js",
+    "start:dc": "nodemon daily_challenge/server.js",
+    "start:xpg": "nodemon XP_Gold/server.js",
+    "start:xpn": "nodemon XP_Ninja/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
