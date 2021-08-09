@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+.header {
+    color: red;
+    border: 2px dashed blue;
+}
+button {
+    color: blue;
+}
