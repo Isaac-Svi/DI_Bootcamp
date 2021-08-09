@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                box-shadow: 0 4px 8px -3px rgb(0 0 0 / 20%),
+                    0 8px 16px -5px rgb(0 0 0 / 10%);
+                background: white;
+            }
+            button {
+                margin: 15px 5px;
+                background: transparent;
+                color: #235789;
+                font-family: 'Roboto Mono';
+                border: none;
+                border-bottom: 2px solid;
+                cursor: pointer;
+            }
+            pre {
+                margin-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <button onclick="getRobots()">Click to get robots</button>
+        </nav>
+        <pre id="robots"></pre>
+        <script>
+            const getRobots = async () => {
+                try {
+                    const res = await fetch('/robots')
+                    const data = await res.json()
+                    robots.innerHTML = JSON.stringify(data, null, 2)
+                } catch (err) {
+                    console.log(err.message)
+                }
+            }
+        </script>
+    </body>
+</html>

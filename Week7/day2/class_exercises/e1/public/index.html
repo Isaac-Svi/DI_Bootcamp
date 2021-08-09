@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+    </head>
+    <body>
+        <h3>Get</h3>
+        <form action="/login">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button>Submit</button>
+        </form>
+
+        <h3>Post</h3>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button>Submit</button>
+        </form>
+
+        <h3>Get Fetch</h3>
+        <form onsubmit="handleSubmit1(event);">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button>Submit</button>
+        </form>
+
+        <h3>Post Fetch</h3>
+        <form onsubmit="handleSubmit2(event);">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button>Submit</button>
+        </form>
+
+        <!-- <h3>Test</h3>
+        <form onsubmit="test(event);">
+            <button>Submit</button>
+        </form> -->
+
+        <div id="root"></div>
+
+        <script src="/index.js"></script>
+        <script>
+            // const test = async (e) => {
+            //     e.preventDefault()
+
+            //     try {
+            //         const first = await fetch('http://example.com')
+            //         const html = await first.text()
+            //         console.log(html)
+            //     } catch (err) {
+            //         console.log(err.message)
+            //     }
+            // }
+        </script>
+    </body>
+</html>
