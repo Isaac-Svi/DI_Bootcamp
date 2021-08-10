@@ -1,0 +1,7 @@
+1. create a new node js server
+2. create a new module - in modules folder - db.js
+3. return all country from dvdrental database
+4. create an index.html
+5. fetch the server to get the country & country_id
+6. create with DOM select-box with all countries from the table
+
