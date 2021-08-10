@@ -1,0 +1,11 @@
+<%- include('header.ejs') %>
+
+<ul>
+    <% for (const {name, price} of items) { %>
+        <li>
+            <%= name %>: <%= price %>
+        </li>
+    <% } %> 
+</ul>
+
+<%- include('footer.ejs') %>

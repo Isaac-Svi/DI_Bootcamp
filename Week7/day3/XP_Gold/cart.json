@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "book",
+        "price": 5
+    },
+    {
+        "id": 2,
+        "name": "waffle",
+        "price": 2
+    },
+    {
+        "id": 3,
+        "name": "bench",
+        "price": 45
+    },
+    {
+        "id": 4,
+        "name": "asdf",
+        "price": 23.23
+    },
+    {
+        "id": 5,
+        "name": "asdfasdfasdf",
+        "price": 58.05
+    },
+    {
+        "id": 6,
+        "name": "test",
+        "price": 45.45
+    },
+    {
+        "id": 7,
+        "name": "howdy",
+        "price": 345
+    }
+]
