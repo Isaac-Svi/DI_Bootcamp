@@ -16,8 +16,8 @@ app.get('/robots', async (req, res) => {
             return x.name.toLowerCase().startsWith(search.toLowerCase())
         })
 
-        for (let i = 0; i < filteredData.length; i++) {
-            filteredData[i].image = `https://robohash.org/${i}`
+        for (const f of filteredData) {
+            f.image = `https://robohash.org/${f.username}`
         }
 
         res.send(filteredData)
