@@ -1,5 +1,6 @@
 const path = require('path')
 const knex = require('knex')
+const brcrypt = require('bcryptjs')
 require('dotenv').config({ path: path.resolve('.env') })
 
 const db = knex({
@@ -20,7 +21,7 @@ module.exports = {
         return db('users')
             .insert({
                 username,
-                password,
+                password: brcrypt.hashSync(password, 10),
             })
             .returning('*')
     },
