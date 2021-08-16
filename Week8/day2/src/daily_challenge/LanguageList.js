@@ -15,12 +15,25 @@ export default class LanguageList extends Component {
         }
     }
 
+    handleClick = (index) => {
+        this.state.languages[index].votes++
+
+        this.setState({ languages: this.state.languages })
+    }
+
     render() {
         return (
             <div>
                 <h2>Vote for your favorite language!</h2>
-                {this.state.languages.map(({ name, votes }) => {
-                    return <Language name={name} votes={votes} />
+                {this.state.languages.map(({ name, votes }, index) => {
+                    return (
+                        <Language
+                            key={index}
+                            name={name}
+                            votes={votes}
+                            handleClick={this.handleClick.bind(null, index)}
+                        />
+                    )
                 })}
             </div>
         )
