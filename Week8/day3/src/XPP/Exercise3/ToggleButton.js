@@ -5,18 +5,17 @@ export default class ToggleButton extends Component {
         super(props)
 
         this.state = {
-            isToggleOn: 'OFF',
+            isToggleOn: true,
         }
     }
 
     toggle = () => {
-        const { isToggleOn } = this.state
-        const x = isToggleOn === 'ON' ? 'OFF' : 'ON'
-
-        this.setState({ isToggleOn: x })
+        this.setState({ isToggleOn: !this.state.isToggleOn })
     }
 
     render() {
-        return <button onClick={this.toggle}>{this.state.isToggleOn}</button>
+        const { isToggleOn } = this.state
+
+        return <button onClick={this.toggle}>{isToggleOn ? 'OFF' : 'ON'}</button>
     }
 }
