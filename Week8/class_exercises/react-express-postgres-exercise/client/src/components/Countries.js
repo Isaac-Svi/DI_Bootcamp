@@ -10,7 +10,8 @@ export default class Countries extends Component {
         this.state = {
             countries: [],
             cities: [],
-            loading: false,
+            cityLoading: true,
+            countryLoading: true,
         }
     }
 
@@ -18,35 +19,43 @@ export default class Countries extends Component {
         fetch('/api/countries')
             .then((res) => res.json())
             .then((data) => {
-                this.setState({ countries: data })
+                this.setState({
+                    countries: data,
+                    countryLoading: false,
+                    cityLoading: false,
+                })
                 this.handleChange({ target: { value: this.el.value } })
             })
             .catch((err) => console.log(err.message))
     }
 
     handleChange = ({ target }) => {
-        this.setState({ loading: true })
+        this.setState({ cityLoading: true })
 
         fetch(`/api/cities/${target.value}`)
             .then((res) => res.json())
-            .then((data) => this.setState({ cities: data, loading: false }))
+            .then((data) => this.setState({ cities: data, cityLoading: false }))
             .catch((err) => console.log(err.message))
     }
 
     render() {
-        const { countries, cities, loading } = this.state
+        const { countries, cities, cityLoading, countryLoading } = this.state
 
         return (
             <>
                 <h1 className='countries-header'>See which cities are in a country: </h1>
                 <div className='countries'>
-                    <Select
-                        ref={(el) => (this.el = el)}
-                        handleChange={this.handleChange}
-                        options={countries}
-                        keys={['country_id', 'country']}
-                    />
-                    {!loading ? (
+                    {!countryLoading ? (
+                        <Select
+                            ref={(el) => (this.el = el)}
+                            handleChange={this.handleChange}
+                            options={countries}
+                            keys={['country_id', 'country']}
+                        />
+                    ) : (
+                        <Loader />
+                    )}
+                    {!cityLoading ? (
                         <Select options={cities} keys={['city_id', 'city']} />
                     ) : (
                         <Loader />
