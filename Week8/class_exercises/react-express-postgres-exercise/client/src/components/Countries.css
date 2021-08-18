@@ -1,10 +1,10 @@
 .countries-header {
     text-align: center;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 .countries {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
