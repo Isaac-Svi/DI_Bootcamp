@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Ring from './Ring'
-import Week from './Week'
 
 const months = [
     'Jan',
@@ -63,7 +62,13 @@ export default class Clock extends Component {
                     <small>/ Year</small>
                 </h1>
                 <Ring numSections={12} targetIndex={month} translate={5} type='month' />
-                <Week numSections={7} targetIndex={dow} translate={11} type='week' />
+                <Ring
+                    percentage={15}
+                    numSections={7}
+                    targetIndex={dow}
+                    translate={11}
+                    type='week'
+                />
                 <Ring
                     numSections={this.getNumDaysInMonth()}
                     targetIndex={dom}

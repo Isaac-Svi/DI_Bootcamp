@@ -1,37 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Ring.css'
 
-export default class Ring extends Component {
-    constructor(props) {
-        super(props)
+const Ring = ({ percentage, numSections, targetIndex, type, translate }) => {
+    percentage = percentage ?? 360 / numSections
 
-        this.percentage = 360 / this.props.numSections
-        this.arr = Array(this.props.numSections).fill(0)
-    }
+    const arr = Array(numSections).fill(0)
 
-    render() {
-        const { targetIndex, type, translate } = this.props
-
-        return (
-            <div
-                className='ring'
-                style={{
-                    '--ratio': this.percentage + 'deg',
-                    '--rotation': this.percentage * -targetIndex + 'deg',
-                }}
-            >
-                {this.arr.map((_, i) => {
-                    return (
-                        <span
-                            key={`${type}-${++i}`}
-                            className={targetIndex === i ? 'target' : ''}
-                            style={{ '--i': i, '--translate': translate + 'em' }}
-                        >
-                            {i} {type}
-                        </span>
-                    )
-                })}
-            </div>
-        )
-    }
+    return (
+        <div
+            className='ring'
+            style={{
+                '--ratio': percentage + 'deg',
+                '--rotation': percentage * -targetIndex + 'deg',
+            }}
+        >
+            {arr.map((_, i) => {
+                return (
+                    <span
+                        key={`${type}-${++i}`}
+                        className={targetIndex === i ? 'target' : ''}
+                        style={{ '--i': i, '--translate': translate + 'em' }}
+                    >
+                        {i} {type}
+                    </span>
+                )
+            })}
+        </div>
+    )
 }
+
+export default Ring
