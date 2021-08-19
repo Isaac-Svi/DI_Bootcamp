@@ -1,0 +1,56 @@
+body {
+    --color: rgb(42, 150, 63);
+    background-color: var(--color);
+    transition: background 0.4s;
+}
+.quote-box {
+    --box-shadow: 0 4px 8px -3px rgb(0 0 0 / 20%), 0 8px 16px -5px rgb(0 0 0 / 10%);
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    max-width: 500px;
+    top: 100px;
+    color: var(--color);
+    background-color: white;
+    transition: 0.4s;
+}
+@keyframes fade-in-down {
+    from {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* .quote-box :nth-child(1) {
+    animation: fade-in-down 1.5s forwards;
+} */
+.quote-box .info.fade-in-down {
+    animation: fade-in-down 1.5s forwards;
+}
+.quote-box .info {
+    transform: translateY(0);
+}
+.quote-box p {
+    text-align: right;
+    font-weight: 600;
+}
+.button-container {
+    text-align: right;
+}
+.quote-box button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: var(--box-shadow);
+}
