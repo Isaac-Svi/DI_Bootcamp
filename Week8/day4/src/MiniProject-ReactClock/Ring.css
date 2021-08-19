@@ -1,0 +1,55 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-image: linear-gradient(-135deg, #235789, steelblue);
+}
+body * {
+    font-family: 'Segoe UI', monospace, sans-serif;
+}
+.year,
+.month {
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+.year {
+    padding: 20px;
+}
+.year small {
+    font-size: 16px;
+}
+.month {
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(var(--rotation));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', monospace, sans-serif;
+    font-size: 15px;
+    color: rgba(211, 211, 211, 0.5);
+
+    transition: 0.5s;
+}
+.ring span {
+    position: absolute;
+    transform: rotate(calc(var(--i) * var(--ratio))) translateX(var(--translate));
+    transition: 0.5s;
+}
+.ring span.target {
+    transform: rotate(calc(var(--i) * var(--ratio)))
+        translateX(calc(var(--translate) - 0.5em)) scale(1.5);
+    color: white;
+}
