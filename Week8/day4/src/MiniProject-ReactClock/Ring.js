@@ -12,6 +12,7 @@ const Ring = ({ percentage, numSections, targetIndex, type, translate }) => {
             style={{
                 '--ratio': percentage + 'deg',
                 '--rotation': percentage * -targetIndex + 'deg',
+                '--translate': translate + 'em',
             }}
         >
             {arr.map((_, i) => {
@@ -19,7 +20,7 @@ const Ring = ({ percentage, numSections, targetIndex, type, translate }) => {
                     <span
                         key={`${type}-${++i}`}
                         className={targetIndex === i ? 'target' : ''}
-                        style={{ '--i': i, '--translate': translate + 'em' }}
+                        style={{ '--i': i }}
                     >
                         {i} {type}
                     </span>
