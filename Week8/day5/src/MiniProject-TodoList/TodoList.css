@@ -1,0 +1,55 @@
+body {
+    background-color: #eeeeee;
+    padding: 0 8vw;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #2f92e1;
+    text-align: center;
+}
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+}
+form small {
+    font-size: 12px;
+    color: #c3c4c6;
+}
+form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #a5a5a5;
+    transition: 0.3s;
+    padding: 10px 0;
+}
+form input:focus {
+    border-bottom: 1px solid darkcyan;
+    box-shadow: 0 1px 0 darkcyan;
+}
+.todo-list {
+    display: flex;
+    flex-direction: column;
+}
+.todo {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+.todo-text:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+}
+.todo:last-of-type {
+    border-bottom: 1px solid #ddd;
+}
+.done {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px;
+}
