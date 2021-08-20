@@ -78,7 +78,8 @@ export default class Clock extends Component {
                 <Ring numSections={24} targetIndex={hour} translate={21} type='hr' />
                 <Ring numSections={60} targetIndex={minute} translate={25.5} type='min' />
                 <Ring numSections={60} targetIndex={second} translate={31} type='sec' />
-                <h1 className='month'>{months[month]}</h1>
+                {/* month - 1 because months starts at 0 */}
+                <h1 className='month'>{months[month - 1]}</h1>
             </div>
         )
     }
