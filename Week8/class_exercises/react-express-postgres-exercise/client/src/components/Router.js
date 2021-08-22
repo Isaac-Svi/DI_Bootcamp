@@ -69,14 +69,28 @@ export default class Router extends Component {
 }
 
 export const Route = (props) => {
-    const { component: Component, path, children } = props
+    console.log(props.children)
 
     return (
         <RouterContext.Consumer>
             {({ getRegex, route, params }) => {
                 return (
-                    getRegex(path).test(route) &&
-                    (Component ? <Component match={{ params }} /> : <>{children}</>)
+                    getRegex(props.path).test(route) &&
+                    (props.component ? (
+                        <props.component match={{ params }} />
+                    ) : (
+                        // necessary to clone the children, since otherwise, we can't add
+                        // the new match and params objects to the children dynamically
+                        React.Children.map(props.children, (child) => {
+                            if (React.isValidElement(child)) {
+                                return React.cloneElement(child, {
+                                    ...child.props,
+                                    match: { params },
+                                })
+                            }
+                            return child
+                        })
+                    ))
                 )
             }}
         </RouterContext.Consumer>
