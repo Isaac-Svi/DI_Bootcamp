@@ -18,7 +18,8 @@ export default class App extends Component {
                 <Route path='/' component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/contact'>
-                    <Contact />
+                    {/* showing that props can be passed in children of Route in Router */}
+                    <Contact a='a' />
                     <Countries />
                 </Route>
                 <Route path='/countries' component={CountryLinks} />
