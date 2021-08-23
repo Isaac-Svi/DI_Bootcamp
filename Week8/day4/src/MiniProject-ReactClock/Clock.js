@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Ring from './Ring'
+import './Clock.css'
 
 const months = [
     'Jan',
@@ -56,7 +57,7 @@ export default class Clock extends Component {
         const { year, dom, dow, month, hour, minute, second } = this.state
 
         return (
-            <div>
+            <div className='clock'>
                 <h1 className='year'>
                     {year}
                     <small>/ Year</small>
