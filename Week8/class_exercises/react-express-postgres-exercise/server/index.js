@@ -1,7 +1,6 @@
 // packages
 require('dotenv').config()
 const express = require('express')
-const cors = require('cors')
 const path = require('path')
 
 // initialize app
@@ -11,17 +10,20 @@ const app = express()
 const { PORT, NODE_ENV } = process.env
 
 // app middleware
-app.use(
-    cors({
-        origin: 'http://localhost:3000',
-        credentials: true,
-    })
-)
+
 app.use(express.json())
 
 if (NODE_ENV === 'production') {
     const clientPath = path.resolve(__dirname, '..', 'client')
     app.use(express.static(path.resolve(clientPath, 'dist')))
+} else {
+    const cors = require('cors')
+    app.use(
+        cors({
+            origin: 'http://localhost:3000',
+            credentials: true,
+        })
+    )
 }
 
 // routes
@@ -36,4 +38,6 @@ app.use((err, req, res, next) => {
     res.redirect('/')
 })
 
-app.listen(PORT, console.log(`Server listening on http://localhost:${PORT}`))
+app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`)
+})
