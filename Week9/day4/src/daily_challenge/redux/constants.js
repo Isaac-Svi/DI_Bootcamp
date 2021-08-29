@@ -1,0 +1,2 @@
+export const CHANGE_INPUT = 'CHANGE_INPUT'
+export const POPULATE_ROBOTS = 'POPULATE_ROBOTS'
