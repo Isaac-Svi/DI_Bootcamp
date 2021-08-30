@@ -1,0 +1,31 @@
+.searchbox-container {
+    position: relative;
+    margin: 30px 10vw;
+    padding: 4rem 2rem;
+    background-color: #e9ecef;
+}
+.searchbox-container h1 {
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+}
+.searchbox-form {
+    text-align: center;
+    width: 100%;
+}
+.searchbox-form * {
+    margin: 10px;
+}
+.searchbox-form input {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.searchbox-form input:focus {
+    box-shadow: 0 0 0 2px lightblue;
+}

@@ -1,0 +1,36 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 95px;
+    padding: 0 10vw;
+}
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 80px;
+}
+nav ul li {
+    margin: 0 10px;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+i.cyan {
+    color: #00d8ff;
+}
+i.yellow {
+    color: gold;
+}
