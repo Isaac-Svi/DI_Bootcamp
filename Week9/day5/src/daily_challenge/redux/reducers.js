@@ -1,11 +1,5 @@
 import { combineReducers } from 'redux'
-import {
-    CHANGE_TEXT,
-    SEARCH_MOVIE,
-    FETCH_MOVIES,
-    FETCH_MOVIE,
-    LOADING,
-} from './constants'
+import { CHANGE_TEXT, FETCH_MOVIES, FETCH_MOVIE, LOADING } from './constants'
 
 const textReducer = (state, action = {}) => {
     switch (action.type) {
@@ -18,8 +12,6 @@ const textReducer = (state, action = {}) => {
 
 const movieReducer = (state, action = {}) => {
     switch (action.type) {
-        case SEARCH_MOVIE:
-            return { ...state }
         case FETCH_MOVIES:
             return { ...state, movies: action.payload, loading: false }
         case FETCH_MOVIE:

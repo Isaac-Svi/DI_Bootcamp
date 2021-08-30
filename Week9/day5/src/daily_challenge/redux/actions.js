@@ -1,12 +1,5 @@
-import {
-    CHANGE_TEXT,
-    SEARCH_MOVIE,
-    FETCH_MOVIES,
-    FETCH_MOVIE,
-    LOADING,
-} from './constants'
-
-const APIKey = 'b3bb3ae'
+import { CHANGE_TEXT, FETCH_MOVIES, FETCH_MOVIE, LOADING } from './constants'
+import { APIKey } from '../config'
 
 export const changeText = (e) => {
     const { value } = e.target
