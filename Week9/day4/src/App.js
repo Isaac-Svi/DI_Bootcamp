@@ -1,13 +1,15 @@
 import React from 'react'
-import DC from './daily_challenge/DC'
-import './style.css'
 // import XP from './XP/XP'
+// import DC from './daily_challenge/DC'
+import XP2 from './XP2/XP2'
+import './style.css'
 
 const App = () => {
     return (
         <>
             {/* <XP /> */}
-            <DC />
+            {/* <DC /> */}
+            <XP2 />
         </>
     )
 }
