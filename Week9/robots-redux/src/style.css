@@ -1,0 +1,52 @@
+* {
+    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px 40px;
+}
+
+.robots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.robot {
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
+    word-break: break-all;
+
+    transition: ease-out 0.7s;
+}
+
+.robot:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px 5px rgb(0 0 0 / 7.5%);
+}
+
+.robot img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.search-text {
+    margin: 20px 0 40px;
+}
+.search-text input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+}
