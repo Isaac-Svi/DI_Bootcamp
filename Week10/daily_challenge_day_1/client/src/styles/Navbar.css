@@ -1,0 +1,29 @@
+nav {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 2px rgb(0 0 0 / 30%);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    color: black;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}

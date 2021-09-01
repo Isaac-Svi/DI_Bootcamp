@@ -1,0 +1,44 @@
+.auth-form {
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(30, 30, 30, 0.5);
+    position: absolute;
+    top: max(100px, 20%);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 30px;
+}
+.auth-form h1 {
+    font-weight: 500;
+}
+.auth-form > * {
+    margin: 3px;
+}
+.input-group {
+    padding: 10px;
+}
+.input-group * {
+    display: block;
+    width: 100%;
+    margin: 3px;
+}
+.input-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.input-group input {
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0 0 0 1.5px lightgray;
+}
+.auth-form button {
+    padding: 5px 10px;
+    background: transparent;
+    box-shadow: 0 0 0 1.5px lightgray;
+    border: none;
+    outline: none;
+    color: gray;
+    cursor: pointer;
+    font-family: 'Segoe UI', monospace;
+}
