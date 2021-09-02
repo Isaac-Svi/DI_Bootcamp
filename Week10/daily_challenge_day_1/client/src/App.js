@@ -6,8 +6,8 @@ import Signin from './pages/Signin'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import AuthProvider from './providers/AuthProvider'
-import PrivateRoute from './components/PrivateRoute'
 import PublicRoute from './components/PublicRoute'
+import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
     return (
@@ -17,20 +17,20 @@ const App = () => {
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <PrivateRoute
+                        redirect='/signin'
                         path='/dashboard'
                         exact
                         component={Dashboard}
-                        redirect='/signin'
                     />
                     <PublicRoute
-                        path='/signin'
                         redirect='/dashboard'
+                        path='/signin'
                         exact
                         component={Signin}
                     />
                     <PublicRoute
-                        path='/register'
                         redirect='/dashboard'
+                        path='/register'
                         exact
                         component={Register}
                     />

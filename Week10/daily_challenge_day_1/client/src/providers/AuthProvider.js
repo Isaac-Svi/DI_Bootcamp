@@ -61,6 +61,24 @@ const AuthProvider = ({ children }) => {
 
     const logout = () => {
         setUser({ name: '', email: '', token: '' })
+        history.push('/')
+    }
+
+    const verify = async () => {
+        try {
+            const res = await fetch('/api/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: user.token }),
+            })
+            const { ok } = await res.json()
+
+            if (!Boolean(ok)) throw new Error('Unauthorized')
+
+            return Boolean(ok)
+        } catch (err) {
+            throw new Error(err)
+        }
     }
 
     const value = {
@@ -71,6 +89,7 @@ const AuthProvider = ({ children }) => {
         login,
         register,
         logout,
+        verify,
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
