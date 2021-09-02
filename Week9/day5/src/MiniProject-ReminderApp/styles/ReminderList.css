@@ -1,0 +1,12 @@
+.reminder-list .delete-button {
+    cursor: pointer;
+    max-width: 10px;
+}
+.reminder-list li {
+    padding: 10px 20px;
+    display: flex;
+    text-align: left;
+}
+.reminder-list li > * {
+    flex: 1;
+}

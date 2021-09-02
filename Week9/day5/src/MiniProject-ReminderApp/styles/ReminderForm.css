@@ -1,0 +1,13 @@
+.reminder-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.reminder-form > * {
+    max-width: 200px;
+}
+.reminder-form button {
+    white-space: nowrap;
+}

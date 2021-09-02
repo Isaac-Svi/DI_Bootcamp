@@ -1,0 +1,8 @@
+.reminder-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reminder-app > * {
+    margin: 20px;
+}
