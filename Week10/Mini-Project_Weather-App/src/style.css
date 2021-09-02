@@ -1,0 +1,11 @@
+* {
+    font-family: Roboto, 'Segoe UI', monospace;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+button a {
+    text-decoration: none;
+    color: white;
+}
