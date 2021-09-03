@@ -38,6 +38,26 @@ class App extends React.Component {
         this.setState({ results: '', calculation: '' })
     }
 
+    buttonInfo = [
+        { func: this.clear, className: 'ac', text: 'AC' },
+        { func: this.doOperation, className: 'divide', text: '/' },
+        { func: this.doOperation, className: 'multiply', text: '*' },
+        { func: this.doOperation, className: 'seven', text: 7 },
+        { func: this.doOperation, className: 'eight', text: 8 },
+        { func: this.doOperation, className: 'nine', text: 9 },
+        { func: this.doOperation, className: 'subtract', text: '-' },
+        { func: this.doOperation, className: 'four', text: 4 },
+        { func: this.doOperation, className: 'five', text: 5 },
+        { func: this.doOperation, className: 'six', text: 6 },
+        { func: this.doOperation, className: 'add', text: '+' },
+        { func: this.doOperation, className: 'one', text: 1 },
+        { func: this.doOperation, className: 'two', text: 2 },
+        { func: this.doOperation, className: 'three', text: 3 },
+        { func: this.evaluate, className: 'equals', text: '=' },
+        { func: this.doOperation, className: 'zero', text: 0 },
+        { func: this.doOperation, className: 'dot', text: '.' },
+    ]
+
     render() {
         const { calculation, results } = this.state
 
@@ -48,57 +68,17 @@ class App extends React.Component {
                     <div className='results'>{results}</div>
                 </div>
                 <div className='buttons'>
-                    <button onClick={this.clear} className='ac'>
-                        AC
-                    </button>
-                    <button onClick={this.doOperation} className='divide'>
-                        /
-                    </button>
-                    <button onClick={this.doOperation} className='multiply'>
-                        *
-                    </button>
-                    <button onClick={this.doOperation} className='seven'>
-                        7
-                    </button>
-                    <button onClick={this.doOperation} className='eight'>
-                        8
-                    </button>
-                    <button onClick={this.doOperation} className='nine'>
-                        9
-                    </button>
-                    <button onClick={this.doOperation} className='subtract'>
-                        -
-                    </button>
-                    <button onClick={this.doOperation} className='four'>
-                        4
-                    </button>
-                    <button onClick={this.doOperation} className='five'>
-                        5
-                    </button>
-                    <button onClick={this.doOperation} className='six'>
-                        6
-                    </button>
-                    <button onClick={this.doOperation} className='add'>
-                        +
-                    </button>
-                    <button onClick={this.doOperation} className='one'>
-                        1
-                    </button>
-                    <button onClick={this.doOperation} className='two'>
-                        2
-                    </button>
-                    <button onClick={this.doOperation} className='three'>
-                        3
-                    </button>
-                    <button onClick={this.evaluate} className='equals'>
-                        =
-                    </button>
-                    <button onClick={this.doOperation} className='zero'>
-                        0
-                    </button>
-                    <button onClick={this.doOperation} className='dot'>
-                        .
-                    </button>
+                    {this.buttonInfo.map(({ func, className, text }, i) => {
+                        return (
+                            <button
+                                key={`calc-btn-${i}`}
+                                onClick={(e) => func(e)}
+                                className={className}
+                            >
+                                {text}
+                            </button>
+                        )
+                    })}
                 </div>
             </div>
         )
