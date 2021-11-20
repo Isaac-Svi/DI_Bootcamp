@@ -1,0 +1,9 @@
+<% posts.forEach(({ title, link, pubDate, creator, categories, content}) => { %>
+    <div>
+        <a href="<%= link %>"><h1><%= title %></h1></a>
+        <div><%= creator %></div>
+        <div><%= pubDate %></div>
+        <div><%= JSON.stringify(categories) %></div>
+        <div><%- content %></div>
+    </div>
+<% }) %>

@@ -1,0 +1,14 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/header.ejs') %>
+
+<form action="/search/title" method="POST">
+    <input type="search" name="title" placeholder="Search post by title">
+    <button>Search</button>
+</form>
+<form action="/search/category" method="POST">
+    <input type="search" name="category" placeholder="Search post by category">
+    <button>Search</button>
+</form>
+
+<%- include('../partials/posts.ejs') %>
+<%- include('../partials/footer.ejs') %>
